@@ -1,0 +1,27 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+label="WAM_XMLExport_AAC_Titles.xml"
+subgraph cluster {
+label="model"
+n2[style="filled",color="white",fillcolor="lightgray",label="E22_Man-Made_Object1"];
+n3[style="filled",color="white",fillcolor="lightgray",label="E35_Title1"];
+n4[style="filled",color="white",fillcolor="lightgray",label="E42_Identifier1"];
+n5[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
+n6[shape="plaintext",style="filled",fillcolor="gold",label="TitleIDURI"];
+n7[shape="plaintext",style="filled",fillcolor="gold",label="ObjectID"];
+n8[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
+n9[shape="plaintext",style="filled",fillcolor="gold",label="TitleType"];
+n10[shape="plaintext",style="filled",fillcolor="gold",label="TitleTypeURI"];
+n11[shape="plaintext",style="filled",fillcolor="gold",label="Title"];
+}
+n2 -> n3[color="brown",fontcolor="black",label="P102_has_title"]
+n2 -> n4[color="brown",fontcolor="black",label="P48_has_preferred_identifier"]
+n3 -> n5[color="brown",fontcolor="black",label="P2_has_type"]
+n3 -> n6[color="brown",fontcolor="black",label="classLink"]
+n4 -> n7[color="brown",fontcolor="black",label="label"]
+n2 -> n8[color="brown",fontcolor="black",label="classLink"]
+n5 -> n9[color="brown",fontcolor="black",label="label"]
+n5 -> n10[color="brown",fontcolor="black",label="classLink"]
+n3 -> n11[color="brown",fontcolor="black",label="label"]
+}
