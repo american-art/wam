@@ -1,0 +1,43 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+label="WAM_XMLExport_AAC_Geography.xml"
+subgraph cluster {
+label="model"
+n2[style="filled",color="white",fillcolor="lightgray",label="E22_Man-Made_Object1"];
+n3[style="filled",color="white",fillcolor="lightgray",label="E42_Identifier1"];
+n4[style="filled",color="white",fillcolor="lightgray",label="E53_Place1"];
+n5[style="filled",color="white",fillcolor="lightgray",label="E42_Identifier2"];
+n6[style="filled",color="white",fillcolor="lightgray",label="E42_Identifier3"];
+n7[style="filled",color="white",fillcolor="lightgray",label="E47_Spatial_Coordinates1"];
+n8[style="filled",color="white",fillcolor="lightgray",label="E48_Place_Name1"];
+n9[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
+n10[shape="plaintext",style="filled",fillcolor="gold",label="SpatialCoOrdinates"];
+n11[shape="plaintext",style="filled",fillcolor="gold",label="TGNTermID"];
+n12[shape="plaintext",style="filled",fillcolor="gold",label="ObjectID"];
+n13[shape="plaintext",style="filled",fillcolor="gold",label="GeoType"];
+n14[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
+n15[shape="plaintext",style="filled",fillcolor="gold",label="GeographyID_URI"];
+n16[shape="plaintext",style="filled",fillcolor="gold",label="GeographyID"];
+n17[shape="plaintext",style="filled",fillcolor="gold",label="GeoTypeURI"];
+n18[shape="plaintext",style="filled",fillcolor="gold",label="GeographyTerm"];
+n19[shape="plaintext",style="filled",fillcolor="gold",label="TGNTermID_URI"];
+}
+n2 -> n3[color="brown",fontcolor="black",label="P48_has_preferred_identifier"]
+n2 -> n4[color="brown",fontcolor="black",label="P62_depicts"]
+n4 -> n5[color="brown",fontcolor="black",label="P48_has_preferred_identifier"]
+n4 -> n6[color="brown",fontcolor="black",label="P1_is_identified_by"]
+n4 -> n7[color="brown",fontcolor="black",label="P1_is_identified_by"]
+n4 -> n8[color="brown",fontcolor="black",label="P1_is_identified_by"]
+n4 -> n9[color="brown",fontcolor="black",label="P2i_is_type_of"]
+n7 -> n10[color="brown",fontcolor="black",label="label"]
+n6 -> n11[color="brown",fontcolor="black",label="label"]
+n3 -> n12[color="brown",fontcolor="black",label="label"]
+n9 -> n13[color="brown",fontcolor="black",label="label"]
+n2 -> n14[color="brown",fontcolor="black",label="classLink"]
+n4 -> n15[color="brown",fontcolor="black",label="classLink"]
+n5 -> n16[color="brown",fontcolor="black",label="label"]
+n9 -> n17[color="brown",fontcolor="black",label="classLink"]
+n8 -> n18[color="brown",fontcolor="black",label="label"]
+n6 -> n19[color="brown",fontcolor="black",label="classLink"]
+}
