@@ -65,7 +65,7 @@ else:
 #### _ObjectID_GeographyID_
 From column: _Root / ObjRecord / ObjectRelatedGeography / Geography / ObjectID_GeographyID_
 ``` python
-return getValue("ObjectID") + "_" + getValue("GeographyID")
+return "object_boundAt/" + getValue("ObjectID") + "_" + getValue("GeographyID")
 ```
 
 
@@ -75,6 +75,9 @@ return getValue("ObjectID") + "_" + getValue("GeographyID")
 | _ExhBeginISODate_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
 | _ExhEndISODate_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | _ExhTitle_ | `rdfs:label` | `crm:E41_Appellation1`|
+| _ExhVenueURI_ | `uri` | `crm:E93_Presence1`|
+| _ExhibCitation_ | `crm:P3_has_note` | `crm:E33_Linguistic_Object1`|
+| _ExhibCitationURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _ExhibitionTimeSpanURI_ | `uri` | `crm:E52_Time-Span1`|
 | _ExhibitionTitleURI_ | `uri` | `crm:E41_Appellation1`|
 | _ExhibitionURI_ | `uri` | `crm:E7_Activity1`|
@@ -88,9 +91,10 @@ return getValue("ObjectID") + "_" + getValue("GeographyID")
 | _ObjectID_ | `rdfs:label` | `crm:E42_Identifier1`|
 | _ObjectID_ | `rdfs:label` | `crm:E42_Identifier1`|
 | _ObjectID_GeographyID_ | `uri` | `crm:E11_Modification1`|
-| _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
+| _ObjectID_GeographyID_ | `uri` | `crm:E11_Modification1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _ObjectURI_ | `uri` | `crm:E42_Identifier1`|
+| _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _PlaceURI_ | `uri` | `crm:E53_Place1`|
 | _SpatialCoOrdinates_ | `rdfs:label` | `crm:E47_Spatial_Coordinates1`|
 | _SpatialCoOrdinates_ | `rdfs:label` | `crm:E47_Spatial_Coordinates1`|
@@ -103,13 +107,16 @@ return getValue("ObjectID") + "_" + getValue("GeographyID")
 | _TitleTypeURI_ | `uri` | `crm:E55_Type1`|
 | _TitleURI_ | `uri` | `crm:E35_Title1`|
 | _TitleURI_ | `uri` | `crm:E35_Title1`|
+| _VenueBegDate_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
+| _VenueDisplayName_ | `rdfs:label` | `crm:E93_Presence1`|
+| _VenueEndDate_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span2`|
 
 
 ### Links
 | From | Property | To |
 |  --- | -------- | ---|
-| `crm:E11_Modification1` | `crm:P31_has_modified` | `crm:E22_Man-Made_Object1`|
 | `crm:E11_Modification1` | `crm:P7_took_place_at` | `crm:E53_Place1`|
+| `crm:E22_Man-Made_Object1` | `crm:P31i_was_modified_by` | `crm:E11_Modification1`|
 | `crm:E22_Man-Made_Object1` | `crm:P48_has_preferred_identifier` | `crm:E42_Identifier1`|
 | `crm:E53_Place1` | `crm:P48_has_preferred_identifier` | `crm:E42_Identifier2`|
 | `crm:E53_Place1` | `crm:P1_is_identified_by` | `crm:E42_Identifier3`|
