@@ -1,0 +1,65 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+label="WAM_AAC_Exhibitions.xml"
+subgraph cluster {
+label="model"
+n2[style="filled",color="white",fillcolor="lightgray",label="E52_Time-Span1"];
+n3[shape="plaintext",style="filled",fillcolor="gold",label="ExhBeginISODate"];
+n4[style="filled",color="white",fillcolor="lightgray",label="E52_Time-Span2"];
+n5[shape="plaintext",style="filled",fillcolor="gold",label="VenueBegDate"];
+n6[style="filled",color="white",fillcolor="lightgray",label="E22_Man-Made_Object1"];
+n7[style="filled",color="white",fillcolor="lightgray",label="E42_Identifier1"];
+n8[style="filled",color="white",fillcolor="lightgray",label="E5_Event1"];
+n9[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionURI"];
+n10[style="filled",color="white",fillcolor="lightgray",label="E41_Appellation1"];
+n11[style="filled",color="white",fillcolor="lightgray",label="E33_Linguistic_Object1"];
+n12[shape="plaintext",style="filled",fillcolor="gold",label="ExhTitle"];
+n13[style="filled",color="white",fillcolor="lightgray",label="E93_Presence1"];
+n14[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionTimeSpanURI"];
+n15[shape="plaintext",style="filled",fillcolor="gold",label="VenueDisplayName"];
+n16[style="filled",color="white",fillcolor="lightgray",label="E42_Identifier2"];
+n17[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionID"];
+n18[shape="plaintext",style="filled",fillcolor="gold",label="ExhibCitationURI"];
+n19[shape="plaintext",style="filled",fillcolor="gold",label="Type_RepositryNo"];
+n20[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
+n21[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionAppellationURI"];
+n22[shape="plaintext",style="filled",fillcolor="gold",label="ExhEndISODate"];
+n23[shape="plaintext",style="filled",fillcolor="gold",label="ExhibCitation"];
+n24[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
+n25[shape="plaintext",style="filled",fillcolor="gold",label="PreferredLabel"];
+n26[shape="plaintext",style="filled",fillcolor="gold",label="ExhVenueURI"];
+n27[shape="plaintext",style="filled",fillcolor="gold",label="ObjectID"];
+n28[shape="plaintext",style="filled",fillcolor="gold",label="VenueEndDate"];
+n29[shape="plaintext",style="filled",fillcolor="gold",label="Type_PreferredTerm"];
+n30[shape="plaintext",style="filled",fillcolor="gold",label="ObjectID_Val"];
+}
+n2 -> n3[color="brown",fontcolor="black",label="P82a_begin_of_the_begin"]
+n4 -> n5[color="brown",fontcolor="black",label="P82a_begin_of_the_begin"]
+n6 -> n7[color="brown",fontcolor="black",label="P1_is_identified_by"]
+n8 -> n9[color="brown",fontcolor="black",label="classLink"]
+n8 -> n2[color="brown",fontcolor="black",label="P4_has_time-span"]
+n8 -> n10[color="brown",fontcolor="black",label="P1_is_identified_by"]
+n11 -> n8[color="brown",fontcolor="black",label="P129_is_about"]
+n10 -> n12[color="brown",fontcolor="black",label="value"]
+n8 -> n13[color="brown",fontcolor="black",label="P166i_had_presence"]
+n2 -> n14[color="brown",fontcolor="black",label="classLink"]
+n13 -> n15[color="brown",fontcolor="black",label="label"]
+n8 -> n16[color="brown",fontcolor="black",label="P48_has_preferred_identifier"]
+n16 -> n17[color="brown",fontcolor="black",label="label"]
+n11 -> n18[color="brown",fontcolor="black",label="classLink"]
+n7 -> n19[color="brown",fontcolor="black",label="P2_has_type"]
+n6 -> n8[color="brown",fontcolor="black",label="P12i_was_present_at"]
+n6 -> n20[color="brown",fontcolor="black",label="classLink"]
+n10 -> n21[color="brown",fontcolor="black",label="classLink"]
+n2 -> n22[color="brown",fontcolor="black",label="P82b_end_of_the_end"]
+n11 -> n23[color="brown",fontcolor="black",label="P3_has_note"]
+n24 -> n25[color="brown",fontcolor="black",label="prefLabel"]
+n13 -> n26[color="brown",fontcolor="black",label="classLink"]
+n10 -> n24[color="brown",fontcolor="black",label="P2_has_type"]
+n13 -> n4[color="brown",fontcolor="black",label="P164_during"]
+n7 -> n27[color="brown",fontcolor="black",label="label"]
+n4 -> n28[color="brown",fontcolor="black",label="P82b_end_of_the_end"]
+n24 -> n29[color="brown",fontcolor="black",label="broadMatch"]
+n7 -> n30[color="brown",fontcolor="black",label="value"]
+}

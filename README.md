@@ -1,9 +1,9 @@
 #wam
 Fork of American-Art/wam, a repository of XML data about American Art at The Walters Art Museum. The data here will be contributed to the American Art Collaborative's Linked Open Data initiative.
 
-| Semantic Models                 | State          |
-|---------------------------------|----------------|
-| WAM_AAC_Titles                  | TO_BE_REVIEWED |
-| WAM_XMLExport_AAC_Geography     | TO_BE_REVIEWED |
-| WAM_XMLExport_AAC_Exhibitions   | TO_BE_REVIEWED |
-| WAM_XMLExport_AAC_Constituents  | IN_PROGRESS    |
+| Semantic Models                 | REVIEW_BY_ISI  | REVIEW_BY_AAC |
+|---------------------------------|----------------|---------------|
+| WAM_AAC_Titles                  |     TO_DO      |     TO_DO     |
+| WAM_AAC_Exhibitions             |     TO_DO      |     TO_DO     |
+| WAM_AAC_Geography               |  IN-PROGRESS   |     -----     |
+
