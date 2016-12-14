@@ -5,5 +5,7 @@ Fork of American-Art/wam, a repository of XML data about American Art at The Wal
 |---------------------------------|----------------|---------------|
 | WAM_AAC_Titles                  |     TO_DO      |     TO_DO     |
 | WAM_AAC_Exhibitions             |     TO_DO      |     TO_DO     |
+| WAM_AAC_Objects                 |     TO_DO      |     TO_DO     |
+| WAM_AAC_Constituents            |  IN-PROGRESS   |     -----     |
 | WAM_AAC_Geography               |  IN-PROGRESS   |     -----     |
 
