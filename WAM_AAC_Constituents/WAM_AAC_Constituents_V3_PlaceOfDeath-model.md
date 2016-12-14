@@ -160,7 +160,7 @@ else:
 From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / Gender_
 <br>Operation: `Union`
 ``` python
-return getValue("ConstituentType") == "Institution"
+return getValue("ConstituentType") != "Individual"
 ```
 
 #### _DEFAULT_TEST_
