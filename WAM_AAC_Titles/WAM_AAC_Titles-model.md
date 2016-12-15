@@ -64,9 +64,6 @@ return getValue("TitleType") != "Title"
 ## Semantic Types
 | Column | Property | Class |
 |  ----- | -------- | ----- |
-| _IdURI_ | `uri` | `crm:E42_Identifier1`|
-| _ObjectID_ | `rdf:value` | `crm:E42_Identifier1`|
-| _ObjectLabel_ | `rdfs:label` | `crm:E42_Identifier1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _Title_ | `rdf:value` | `crm:E35_Title1`|
 | _TitleID_ | `rdf:value` | `crm:E42_Identifier2`|
@@ -79,8 +76,6 @@ return getValue("TitleType") != "Title"
 | From | Property | To |
 |  --- | -------- | ---|
 | `crm:E22_Man-Made_Object1` | `crm:P102_has_title` | `crm:E35_Title1`|
-| `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E35_Title1` | `crm:P1_is_identified_by` | `crm:E42_Identifier2`|
 | `crm:E35_Title1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
-| `crm:E42_Identifier1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404012`|
 | `crm:E42_Identifier2` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404012`|
