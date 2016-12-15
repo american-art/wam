@@ -6,34 +6,24 @@ subgraph cluster {
 label="model"
 n2[style="filled",color="white",fillcolor="lightgray",label="E22_Man-Made_Object1"];
 n3[style="filled",color="white",fillcolor="lightgray",label="E35_Title1"];
-n4[style="filled",color="white",fillcolor="lightgray",label="E42_Identifier1"];
-n5[style="filled",color="white",fillcolor="lightgray",label="E42_Identifier2"];
+n4[style="filled",color="white",fillcolor="lightgray",label="E42_Identifier2"];
+n5[shape="plaintext",style="filled",fillcolor="gold",label="Title_IDURI"];
 n6[shape="plaintext",style="filled",fillcolor="gold",label="TitleLabel"];
-n7[shape="plaintext",style="filled",fillcolor="gold",label="IdURI"];
-n8[shape="plaintext",style="filled",fillcolor="gold",label="ObjectID"];
-n9[shape="plaintext",style="filled",fillcolor="gold",label="Title"];
-n10[shape="plaintext",style="filled",fillcolor="gold",label="Title_IDURI"];
-n11[shape="plaintext",style="filled",fillcolor="gold",label="TitleID"];
-n12[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
-n13[shape="plaintext",style="filled",fillcolor="gold",label="TitleIDURI"];
-n14[shape="plaintext",style="filled",fillcolor="gold",label="ObjectLabel"];
-n15[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
-n16[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404012"];
-n17[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404012"];
+n7[shape="plaintext",style="filled",fillcolor="gold",label="Title"];
+n8[shape="plaintext",style="filled",fillcolor="gold",label="TitleIDURI"];
+n9[shape="plaintext",style="filled",fillcolor="gold",label="TitleID"];
+n10[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
+n11[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
+n12[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404012"];
 }
 n2 -> n3[color="brown",fontcolor="black",label="P102_has_title"]
-n2 -> n4[color="brown",fontcolor="black",label="P1_is_identified_by"]
-n3 -> n5[color="brown",fontcolor="black",label="P1_is_identified_by"]
+n3 -> n4[color="brown",fontcolor="black",label="P1_is_identified_by"]
+n4 -> n5[color="brown",fontcolor="black",label="classLink"]
 n2 -> n6[color="brown",fontcolor="black",label="label"]
-n4 -> n7[color="brown",fontcolor="black",label="classLink"]
-n4 -> n8[color="brown",fontcolor="black",label="value"]
-n3 -> n9[color="brown",fontcolor="black",label="value"]
-n5 -> n10[color="brown",fontcolor="black",label="classLink"]
-n5 -> n11[color="brown",fontcolor="black",label="value"]
-n2 -> n12[color="brown",fontcolor="black",label="classLink"]
-n3 -> n13[color="brown",fontcolor="black",label="classLink"]
-n4 -> n14[color="brown",fontcolor="black",label="label"]
-n3 -> n15[color="brown",fontcolor="black",label="P2_has_type"]
-n5 -> n16[color="brown",fontcolor="black",label="P2_has_type"]
-n4 -> n17[color="brown",fontcolor="black",label="P2_has_type"]
+n3 -> n7[color="brown",fontcolor="black",label="value"]
+n3 -> n8[color="brown",fontcolor="black",label="classLink"]
+n4 -> n9[color="brown",fontcolor="black",label="value"]
+n2 -> n10[color="brown",fontcolor="black",label="classLink"]
+n3 -> n11[color="brown",fontcolor="black",label="P2_has_type"]
+n4 -> n12[color="brown",fontcolor="black",label="P2_has_type"]
 }
