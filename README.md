@@ -3,9 +3,10 @@ Fork of American-Art/wam, a repository of XML data about American Art at The Wal
 
 | Semantic Models                 | REVIEW_BY_ISI  | REVIEW_BY_AAC |
 |---------------------------------|----------------|---------------|
-| WAM_AAC_Titles                  |     TO_DO      |     TO_DO     |
-| WAM_AAC_Exhibitions             |     TO_DO      |     TO_DO     |
-| WAM_AAC_Objects                 |     TO_DO      |     TO_DO     |
-| WAM_AAC_Constituents            |  IN-PROGRESS   |     -----     |
+| WAM_AAC_Titles                  |     Verify_Data      |     TO_DO     |
+| WAM_AAC_Exhibitions             |     Verify_Data      |     TO_DO     |
+| WAM_AAC_Objects                 |     Verify_Data      |     TO_DO     |
+| WAM_AAC_Constituents            |  Verify_Data   |     TO_DO     |
+| WAM_AAC_Dimensions            |  Verify_Data   |     TO_DO     |
 | WAM_AAC_Geography               |  IN-PROGRESS   |     -----     |
 
