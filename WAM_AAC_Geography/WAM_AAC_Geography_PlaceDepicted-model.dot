@@ -13,22 +13,22 @@ n7[style="filled",color="white",fillcolor="lightgray",label="E47_Spatial_Coordin
 n8[style="filled",color="white",fillcolor="lightgray",label="E47_Spatial_Coordinates3"];
 n9[style="filled",color="white",fillcolor="lightgray",label="E48_Place_Name1"];
 n10[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
-n11[shape="plaintext",style="filled",fillcolor="gold",label="GeoType"];
-n12[shape="plaintext",style="filled",fillcolor="gold",label="GeographyID_URI"];
+n11[shape="plaintext",style="filled",fillcolor="gold",label="SpatialCoOrdinates"];
+n12[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
 n13[shape="plaintext",style="filled",fillcolor="gold",label="ObjectID"];
-n14[shape="plaintext",style="filled",fillcolor="gold",label="GeographyTerm"];
-n15[shape="plaintext",style="filled",fillcolor="gold",label="GeographyID"];
-n16[shape="plaintext",style="filled",fillcolor="gold",label="Longitude"];
-n17[shape="plaintext",style="filled",fillcolor="gold",label="GeoTypeURI"];
-n18[shape="plaintext",style="filled",fillcolor="gold",label="SpatialCoOrdinates"];
-n19[shape="plaintext",style="filled",fillcolor="gold",label="Latitude"];
-n20[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
-n21[shape="plaintext",style="filled",fillcolor="gold",label="ObjectVal"];
-n22[shape="plaintext",style="filled",fillcolor="gold",label="ObjectID_URI"];
-n23[shape="plaintext",style="filled",fillcolor="#CC7799",label="7012149-place1"];
-n24[shape="plaintext",style="filled",fillcolor="#CC7799",label="3004046211"];
-n25[shape="plaintext",style="filled",fillcolor="#CC7799",label="3003875651"];
-n26[shape="plaintext",style="filled",fillcolor="#CC7799",label="3003875671"];
+n14[shape="plaintext",style="filled",fillcolor="gold",label="Longitude"];
+n15[shape="plaintext",style="filled",fillcolor="gold",label="GeoTypeURI"];
+n16[shape="plaintext",style="filled",fillcolor="gold",label="GeoType"];
+n17[shape="plaintext",style="filled",fillcolor="gold",label="ObjectID_URI"];
+n18[shape="plaintext",style="filled",fillcolor="gold",label="GeographyID"];
+n19[shape="plaintext",style="filled",fillcolor="gold",label="GeographyTerm"];
+n20[shape="plaintext",style="filled",fillcolor="gold",label="GeographyID_URI"];
+n21[shape="plaintext",style="filled",fillcolor="gold",label="Latitude"];
+n22[shape="plaintext",style="filled",fillcolor="gold",label="ObjectVal"];
+n23[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/tgn/7012149-place"];
+n24[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404621"];
+n25[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300387565"];
+n26[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300387567"];
 }
 n2 -> n3[color="brown",fontcolor="black",label="P1_is_identified_by"]
 n2 -> n4[color="brown",fontcolor="black",label="P62_depicts"]
@@ -38,18 +38,18 @@ n4 -> n7[color="brown",fontcolor="black",label="P87_is_identified_by"]
 n4 -> n8[color="brown",fontcolor="black",label="P87_is_identified_by"]
 n4 -> n9[color="brown",fontcolor="black",label="P1_is_identified_by"]
 n4 -> n10[color="brown",fontcolor="black",label="P2i_is_type_of"]
-n10 -> n11[color="brown",fontcolor="black",label="label"]
-n4 -> n12[color="brown",fontcolor="black",label="classLink"]
+n6 -> n11[color="brown",fontcolor="black",label="label"]
+n2 -> n12[color="brown",fontcolor="black",label="classLink"]
 n3 -> n13[color="brown",fontcolor="black",label="label"]
-n9 -> n14[color="brown",fontcolor="black",label="label"]
-n5 -> n15[color="brown",fontcolor="black",label="label"]
-n8 -> n16[color="brown",fontcolor="black",label="value"]
-n10 -> n17[color="brown",fontcolor="black",label="classLink"]
-n6 -> n18[color="brown",fontcolor="black",label="label"]
-n7 -> n19[color="brown",fontcolor="black",label="value"]
-n2 -> n20[color="brown",fontcolor="black",label="classLink"]
-n3 -> n21[color="brown",fontcolor="black",label="value"]
-n3 -> n22[color="brown",fontcolor="black",label="classLink"]
+n8 -> n14[color="brown",fontcolor="black",label="value"]
+n10 -> n15[color="brown",fontcolor="black",label="classLink"]
+n10 -> n16[color="brown",fontcolor="black",label="label"]
+n3 -> n17[color="brown",fontcolor="black",label="classLink"]
+n5 -> n18[color="brown",fontcolor="black",label="label"]
+n9 -> n19[color="brown",fontcolor="black",label="label"]
+n4 -> n20[color="brown",fontcolor="black",label="classLink"]
+n7 -> n21[color="brown",fontcolor="black",label="value"]
+n3 -> n22[color="brown",fontcolor="black",label="value"]
 n4 -> n23[color="brown",fontcolor="black",label="exactMatch"]
 n3 -> n24[color="brown",fontcolor="black",label="P2_has_type"]
 n7 -> n25[color="brown",fontcolor="black",label="P2_has_type"]
