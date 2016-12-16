@@ -39,13 +39,21 @@ return getValue("ObjectID")
 #### _ObjectURI_
 From column: _Root / ObjRecord / ObjectID_
 ``` python
-return "id/object/" + getValue("ObjectID")
+return "object/id/" + getValue("ObjectID")
 ```
 
 #### _TitleIDURI_
 From column: _Root / ObjRecord / Titles / Title / TitleID_
 ``` python
-return "title/" + getValue("TitleID")
+def cleanURI(prefix, value):
+    uri_value = value.lower().replace(' ', '_')
+    return UM.uri_from_fields(prefix + uri_value)
+prefix = getValue("ObjectURI") + "/"
+titleType = getValue("TitleType")
+if titleType:
+    return cleanURI(prefix,titleType)
+else:
+    return ""
 ```
 
 #### _IdURI_
@@ -61,8 +69,8 @@ def cleanURI(prefix, value):
     uri_value = value.lower().replace(' ', '_')
     return UM.uri_from_fields(prefix + uri_value)
 
-titleTypePrefix = 'title_type/'
-titleType = getValue('TitleType')
+titleTypePrefix = getValue("ObjectURI") + "/"
+titleType = "title_type" + "/" + getValue("TitleType")
 if titleType:
     return cleanURI(titleTypePrefix,titleType)
 else:
@@ -72,7 +80,7 @@ else:
 #### _Title_IDURI_
 From column: _Root / ObjRecord / Titles / Title / TitleID_
 ``` python
-return getValue("TitleIDURI")
+return getValue("TitleIDURI") + "/id/" + getValue("TitleID")
 ```
 
 
