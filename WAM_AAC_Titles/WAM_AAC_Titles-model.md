@@ -30,13 +30,13 @@ return "id/" + getValue("ObjectID")
 #### _ObjectURI_
 From column: _Root / ObjRecord / IdURI_
 ``` python
-return "id/object/" + getValue("ObjectID")
+return "object/id/" + getValue("ObjectID")
 ```
 
 #### _Title_IDURI_
 From column: _Root / ObjRecord / Titles / Title / TitleID_
 ``` python
-return "title/" + getValue("TitleID")
+return getValue("TitleIDURI") + "/id/" + getValue("TitleID")
 ```
 
 #### _TitleLabel_
@@ -48,7 +48,7 @@ return getValue("Title")
 #### _TitleIDURI_
 From column: _Root / ObjRecord / Titles / Title / Title_IDURI_
 ``` python
-return "title/" + getValue("TitleID")
+return getValue("ObjectURI") + "/" + getValue("TitleType").lower()
 ```
 
 
