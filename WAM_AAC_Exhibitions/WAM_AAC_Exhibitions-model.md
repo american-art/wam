@@ -1,4 +1,4 @@
-# WAM_AAC_Exhibitions.xml
+# WAM_XMLExport_AAC_Exhibitions.xml
 
 ## Add Column
 #### _ExhibitionURI_
@@ -60,7 +60,7 @@ From column: _Root / ObjRecord / Exhibitions / Exhibitions / ExhibitionURI_
 ``` python
 exhibitID = getValue("ExhibitionID")
 if exhibitID != "":
-    return "id/exhibition/" + exhibitID
+    return "exhibition/id/" + exhibitID
 else:
     return ""
 ```
@@ -80,7 +80,7 @@ return getValue("ExhibitionURI") + "/time_span"
 #### _ObjectURI_
 From column: _Root / ObjRecord / ObjectURI_
 ``` python
-return "id/object/"+getValue("ObjectID")
+return "object/id/"+getValue("ObjectID")
 ```
 
 #### _ExhibCitationURI_
@@ -116,6 +116,16 @@ From column: _Root / ObjRecord / ObjectID_Val_
 return getValue("ObjectURI")
 ```
 
+#### _VenueDateURI_
+From column: _Root / ObjRecord / Exhibitions / Exhibitions / ExhVenues / ExhVenues / VenueEndDate_
+``` python
+begin = getValue("VenueBegDate")
+if begin:
+    return getValue("ExhVenueURI") + "/date/"
+else:
+    return ""
+```
+
 
 ## Selections
 #### _DEFAULT_TEST_
@@ -139,12 +149,10 @@ return getValue("ExhibitionID") == ""
 | _ExhibitionID_ | `rdfs:label` | `crm:E42_Identifier2`|
 | _ExhibitionTimeSpanURI_ | `uri` | `crm:E52_Time-Span1`|
 | _ExhibitionURI_ | `uri` | `crm:E5_Event1`|
-| _ObjectID_ | `rdfs:label` | `crm:E42_Identifier1`|
-| _ObjectID_URI_ | `uri` | `crm:E42_Identifier1`|
-| _ObjectID_Val_ | `rdf:value` | `crm:E42_Identifier1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _PreferredLabel_ | `skos:prefLabel` | `crm:E55_Type1`|
 | _VenueBegDate_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
+| _VenueDateURI_ | `uri` | `crm:E52_Time-Span2`|
 | _VenueDisplayName_ | `rdfs:label` | `crm:E93_Presence1`|
 | _VenueEndDate_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span2`|
 
@@ -152,10 +160,8 @@ return getValue("ExhibitionID") == ""
 ## Links
 | From | Property | To |
 |  --- | -------- | ---|
-| `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E22_Man-Made_Object1` | `crm:P12i_was_present_at` | `crm:E5_Event1`|
 | `crm:E41_Appellation1` | `crm:P2_has_type` | `crm:E55_Type1`|
-| `crm:E42_Identifier1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404621`|
 | `crm:E55_Type1` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300404670`|
 | `crm:E5_Event1` | `crm:P129_is_about` | `crm:E33_Linguistic_Object1`|
 | `crm:E5_Event1` | `crm:P1_is_identified_by` | `crm:E41_Appellation1`|
