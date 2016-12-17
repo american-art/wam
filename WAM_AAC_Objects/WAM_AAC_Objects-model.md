@@ -57,7 +57,7 @@ return getValue("ResourceURL")
 #### _ObjectID_URI_
 From column: _Root / ObjRecord / ObjUnderJurisOf_
 ``` python
-return "id/object/" + getValue("ObjectID")
+return "object/id/" + getValue("ObjectID")
 ```
 
 #### _IdURI_
