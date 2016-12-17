@@ -22,15 +22,16 @@ n16[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionID"];
 n17[shape="plaintext",style="filled",fillcolor="gold",label="VenueBegDate"];
 n18[shape="plaintext",style="filled",fillcolor="gold",label="VenueDisplayName"];
 n19[shape="plaintext",style="filled",fillcolor="gold",label="VenueEndDate"];
-n20[shape="plaintext",style="filled",fillcolor="gold",label="ExhTitle"];
-n21[shape="plaintext",style="filled",fillcolor="gold",label="ExhVenueURI"];
-n22[shape="plaintext",style="filled",fillcolor="gold",label="PreferredLabelURI"];
-n23[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
-n24[shape="plaintext",style="filled",fillcolor="gold",label="PreferredLabel"];
-n25[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionAppellationURI"];
-n26[shape="plaintext",style="filled",fillcolor="gold",label="ExhibCitationURI"];
-n27[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionURI"];
-n28[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
+n20[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionID_URI"];
+n21[shape="plaintext",style="filled",fillcolor="gold",label="ExhTitle"];
+n22[shape="plaintext",style="filled",fillcolor="gold",label="ExhVenueURI"];
+n23[shape="plaintext",style="filled",fillcolor="gold",label="PreferredLabelURI"];
+n24[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
+n25[shape="plaintext",style="filled",fillcolor="gold",label="PreferredLabel"];
+n26[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionAppellationURI"];
+n27[shape="plaintext",style="filled",fillcolor="gold",label="ExhibCitationURI"];
+n28[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionURI"];
+n29[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
 }
 n2 -> n3[color="brown",fontcolor="black",label="P12i_was_present_at"]
 n4 -> n5[color="brown",fontcolor="black",label="P2_has_type"]
@@ -49,13 +50,14 @@ n7 -> n16[color="brown",fontcolor="black",label="label"]
 n10 -> n17[color="brown",fontcolor="black",label="P82a_begin_of_the_begin"]
 n9 -> n18[color="brown",fontcolor="black",label="label"]
 n10 -> n19[color="brown",fontcolor="black",label="P82b_end_of_the_end"]
-n4 -> n20[color="brown",fontcolor="black",label="value"]
-n9 -> n21[color="brown",fontcolor="black",label="classLink"]
-n5 -> n22[color="brown",fontcolor="black",label="classLink"]
-n2 -> n23[color="brown",fontcolor="black",label="classLink"]
-n5 -> n24[color="brown",fontcolor="black",label="prefLabel"]
-n4 -> n25[color="brown",fontcolor="black",label="classLink"]
-n6 -> n26[color="brown",fontcolor="black",label="classLink"]
-n3 -> n27[color="brown",fontcolor="black",label="classLink"]
-n5 -> n28[color="brown",fontcolor="black",label="broadMatch"]
+n7 -> n20[color="brown",fontcolor="black",label="classLink"]
+n4 -> n21[color="brown",fontcolor="black",label="value"]
+n9 -> n22[color="brown",fontcolor="black",label="classLink"]
+n5 -> n23[color="brown",fontcolor="black",label="classLink"]
+n2 -> n24[color="brown",fontcolor="black",label="classLink"]
+n5 -> n25[color="brown",fontcolor="black",label="prefLabel"]
+n4 -> n26[color="brown",fontcolor="black",label="classLink"]
+n6 -> n27[color="brown",fontcolor="black",label="classLink"]
+n3 -> n28[color="brown",fontcolor="black",label="classLink"]
+n5 -> n29[color="brown",fontcolor="black",label="broadMatch"]
 }
