@@ -126,6 +126,12 @@ else:
     return ""
 ```
 
+#### _PreferredLabelURI_
+From column: _Root / ObjRecord / Exhibitions / Exhibitions / PreferredLabel_
+``` python
+return getValue("ExhibitionURI") + "/" + getValue("PreferredLabel").lower()
+```
+
 
 ## Selections
 #### _DEFAULT_TEST_
@@ -151,6 +157,7 @@ return getValue("ExhibitionID") == ""
 | _ExhibitionURI_ | `uri` | `crm:E5_Event1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _PreferredLabel_ | `skos:prefLabel` | `crm:E55_Type1`|
+| _PreferredLabelURI_ | `uri` | `crm:E55_Type1`|
 | _VenueBegDate_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
 | _VenueDateURI_ | `uri` | `crm:E52_Time-Span2`|
 | _VenueDisplayName_ | `rdfs:label` | `crm:E93_Presence1`|
