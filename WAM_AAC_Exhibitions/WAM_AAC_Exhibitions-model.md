@@ -132,6 +132,12 @@ From column: _Root / ObjRecord / Exhibitions / Exhibitions / PreferredLabel_
 return getValue("ExhibitionURI") + "/" + getValue("PreferredLabel").lower()
 ```
 
+#### _ExhibitionID_URI_
+From column: _Root / ObjRecord / Exhibitions / Exhibitions / ExhibitionID_
+``` python
+return getValue("ExhibitionURI") + "/id/"
+```
+
 
 ## Selections
 #### _DEFAULT_TEST_
@@ -153,6 +159,7 @@ return getValue("ExhibitionID") == ""
 | _ExhibCitationURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _ExhibitionAppellationURI_ | `uri` | `crm:E41_Appellation1`|
 | _ExhibitionID_ | `rdfs:label` | `crm:E42_Identifier2`|
+| _ExhibitionID_URI_ | `uri` | `crm:E42_Identifier2`|
 | _ExhibitionTimeSpanURI_ | `uri` | `crm:E52_Time-Span1`|
 | _ExhibitionURI_ | `uri` | `crm:E5_Event1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
