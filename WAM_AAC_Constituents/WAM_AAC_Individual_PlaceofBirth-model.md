@@ -113,7 +113,7 @@ else:
     return ""
 ```
 
-#### _PlaceURI_
+#### _BirthURI_
 From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentGeography / ConstituentGeography / ThesGeographyTerm_
 ``` python
 def cleanURI(prefix, value):
@@ -126,6 +126,12 @@ else:
     return ""
 ```
 
+#### _PlaceURI_
+From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentGeography / ConstituentGeography / ThesGeographyTerm_
+``` python
+return getValue("BirthURI") + "/" + getValue("ConGeoTGNSourceTermID")
+```
+
 
 ## Selections
 #### _DEFAULT_TEST_
@@ -133,6 +139,13 @@ From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / Gende
 <br>Operation: `Union`
 ``` python
 return getValue("ConstituentType") != "Individual"
+```
+
+#### _DEFAULT_TEST_
+From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentGeography / ConstituentGeography / SpatialCoordinates_
+<br>Operation: `Union`
+``` python
+return getValue("ThesGeoType") != "Birth Location"
 ```
 
 
@@ -153,6 +166,7 @@ return getValue("ConstituentType") != "Individual"
 | _GenderURI_ | `uri` | `crm:E55_Type1`|
 | _ObjectID_URI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _PlaceURI_ | `uri` | `crm:E53_Place1`|
+| _PlaceURI_ | `uri` | `crm:E63_Beginning_of_Existence1`|
 | _Production_URI_ | `uri` | `crm:E12_Production1`|
 | _SpatialCoordinates_ | `rdfs:label` | `crm:E47_Spatial_Coordinates1`|
 | _ThesGeographyTerm_ | `rdfs:label` | `crm:E53_Place1`|
@@ -169,10 +183,12 @@ return getValue("ConstituentType") != "Individual"
 | `crm:E39_Actor1` | `crm:P129i_is_subject_of` | `crm:E33_Linguistic_Object1`|
 | `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation1`|
 | `crm:E39_Actor1` | `crm:P2_has_type` | `crm:E55_Type1`|
+| `crm:E39_Actor1` | `crm:P92i_was_brought_into_existence_by` | `crm:E63_Beginning_of_Existence1`|
 | `crm:E39_Actor1` | `skos:exactMatch` | `skos:Concept1`|
 | `crm:E53_Place1` | `crm:P1_is_identified_by` | `crm:E47_Spatial_Coordinates1`|
 | `crm:E53_Place1` | `crm:P48_has_preferred_identifier` | `crm:E42_Identifier1`|
 | `crm:E55_Type1` | `crm:P2_has_type` | `crm:E55_Type2`|
 | `crm:E55_Type2` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300055147`|
+| `crm:E63_Beginning_of_Existence1` | `crm:P7_took_place_at` | `crm:E53_Place1`|
 | `crm:E82_Actor_Appellation1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
 | `skos:Concept1` | `skos:inScheme` | `xsd:http://vocab.getty.edu/ulan`|
