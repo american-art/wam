@@ -26,19 +26,19 @@ return getValue("ObjectID")
 #### _DimensionTypeURI_
 From column: _Root / ObjRecord / Dimensions / DimensionType / DimensionPart / DimensionType_
 ``` python
-return getValue("DimensionElementURI") + "/type/" + getValue("DimensionType").lower()
+return getValue("DimensionURI") + "type/" + getValue("DimensionType").lower()
 ```
 
 #### _DimensionElementURI_
 From column: _Root / ObjRecord / Dimensions / DimensionType / Element_
 ``` python
-return getValue("DimensionURI") + "/" + getValue("Element").lower()
+return getValue("PhysicalThing_URI") + getValue("Element").lower() + "/" + getValue("DimensionID")
 ```
 
 #### _DimensionURI_
 From column: _Root / ObjRecord / Dimensions / DimensionType / DimensionID_
 ``` python
-return getValue("ObjectID_URI") + "/dimension/" + getValue("DimItemElemXrefID")
+return getValue("DimensionElementURI") + "/dimension/"
 ```
 
 #### _PhysicalThing_URI_
@@ -50,7 +50,7 @@ return getValue("ObjectID_URI") + "/physical/"
 #### _DimensionDetailURI_
 From column: _Root / ObjRecord / Dimensions / DimensionType / DimensionPart / DimRank_
 ``` python
-return getValue("DimensionElementURI") + "/" + getValue("DimensionType").lower()
+return getValue("DimensionURI") + getValue("DimensionType").lower()
 ```
 
 #### _DimensionElement_
