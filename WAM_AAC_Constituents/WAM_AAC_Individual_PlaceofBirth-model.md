@@ -66,6 +66,12 @@ From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / Gende
 return getValue("ConstituentURI") + "/gender"
 ```
 
+#### _GenderTypeURI_
+From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / GenderURI_
+``` python
+return getValue("ConstituentURI") + "/gender_type"
+```
+
 
 ## Selections
 #### _DEFAULT_TEST_
@@ -85,6 +91,7 @@ return getValue("ConstituentType") != "Individual"
 | _CreatorULANID_ | `rdfs:label` | `skos:Concept1`|
 | _DisplayName_ | `rdfs:label` | `crm:E39_Actor1`|
 | _Gender_ | `rdfs:label` | `crm:E55_Type1`|
+| _GenderTypeURI_ | `uri` | `crm:E55_Type2`|
 | _GenderURI_ | `uri` | `crm:E55_Type1`|
 | _ObjectID_URI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _Production_URI_ | `uri` | `crm:E12_Production1`|
