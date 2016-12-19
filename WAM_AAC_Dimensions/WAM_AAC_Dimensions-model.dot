@@ -8,28 +8,22 @@ n2[style="filled",color="white",fillcolor="lightgray",label="E18_Physical_Thing1
 n3[style="filled",color="white",fillcolor="lightgray",label="E54_Dimension1"];
 n4[style="filled",color="white",fillcolor="lightgray",label="E22_Man-Made_Object1"];
 n5[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
-n6[style="filled",color="white",fillcolor="lightgray",label="E55_Type2"];
+n6[shape="plaintext",style="filled",fillcolor="gold",label="DimensionType"];
 n7[shape="plaintext",style="filled",fillcolor="gold",label="UnitLabel"];
 n8[shape="plaintext",style="filled",fillcolor="gold",label="Dimension"];
-n9[shape="plaintext",style="filled",fillcolor="gold",label="DimensionElementURI"];
-n10[shape="plaintext",style="filled",fillcolor="gold",label="Element"];
-n11[shape="plaintext",style="filled",fillcolor="gold",label="DimensionType"];
-n12[shape="plaintext",style="filled",fillcolor="gold",label="DimensionTypeURI"];
-n13[shape="plaintext",style="filled",fillcolor="gold",label="PhysicalThing_URI"];
-n14[shape="plaintext",style="filled",fillcolor="gold",label="ObjectID_URI"];
-n15[shape="plaintext",style="filled",fillcolor="gold",label="DimensionDetailURI"];
+n9[shape="plaintext",style="filled",fillcolor="gold",label="DimensionTypeURI"];
+n10[shape="plaintext",style="filled",fillcolor="gold",label="PhysicalThing_URI"];
+n11[shape="plaintext",style="filled",fillcolor="gold",label="ObjectID_URI"];
+n12[shape="plaintext",style="filled",fillcolor="gold",label="DimensionDetailURI"];
 }
 n2 -> n3[color="brown",fontcolor="black",label="P43_has_dimension"]
 n4 -> n2[color="brown",fontcolor="black",label="P46_is_composed_of"]
 n3 -> n5[color="brown",fontcolor="black",label="P2_has_type"]
-n3 -> n6[color="brown",fontcolor="black",label="P2_has_type"]
+n5 -> n6[color="brown",fontcolor="black",label="prefLabel"]
 n3 -> n7[color="brown",fontcolor="black",label="P91_has_unit"]
 n3 -> n8[color="brown",fontcolor="black",label="value"]
-n6 -> n9[color="brown",fontcolor="black",label="classLink"]
-n6 -> n10[color="brown",fontcolor="black",label="prefLabel"]
-n5 -> n11[color="brown",fontcolor="black",label="prefLabel"]
-n5 -> n12[color="brown",fontcolor="black",label="classLink"]
-n2 -> n13[color="brown",fontcolor="black",label="classLink"]
-n4 -> n14[color="brown",fontcolor="black",label="classLink"]
-n3 -> n15[color="brown",fontcolor="black",label="classLink"]
+n5 -> n9[color="brown",fontcolor="black",label="classLink"]
+n2 -> n10[color="brown",fontcolor="black",label="classLink"]
+n4 -> n11[color="brown",fontcolor="black",label="classLink"]
+n3 -> n12[color="brown",fontcolor="black",label="classLink"]
 }
