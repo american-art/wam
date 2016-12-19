@@ -83,6 +83,49 @@ From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / Biogr
 return getValue("ConstituentURI") + "/biography"
 ```
 
+#### _SpatialCoordinates_
+From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentGeography / ConstituentGeography / ConGeoLongitudeNumber_
+``` python
+def format_latLong(str):
+    deg = u"\u00b0"  # utf code for degree
+    dim = str.split(' ')
+    if len(dim) == 2:
+        return dim[0].lstrip('0') + deg + dim[1] + "\'"
+    else:
+        return ""
+lat = getValue("ConGeoLatitude")
+latDir = getValue("ConGeoLatDirection")
+long = getValue("ConGeoLongitude")
+longDir = getValue("ConGeoLongDirection")
+if longDir == "" or latDir == "" or long == "" or lat == "":
+    return ""
+else:
+    return "\"" + format_latLong(lat)  + " " + latDir +  " " + format_latLong(long) + " " +longDir + "\""
+```
+
+#### _ConGeoTGNSourceTermID_URI_
+From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentGeography / ConstituentGeography / ConGeoTGNSourceTermID_
+``` python
+conGeoTGNSourceTermID = getValue("ConGeoTGNSourceTermID")
+if conGeoTGNSourceTermID:
+    return "http://vocab.getty.edu/tgn/" + conGeoTGNSourceTermID
+else:
+    return ""
+```
+
+#### _PlaceURI_
+From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentGeography / ConstituentGeography / ThesGeographyTerm_
+``` python
+def cleanURI(prefix, value):
+    uri_value = value.lower().replace(' ', '_')
+    return UM.uri_from_fields(prefix + uri_value)
+geoType = getValue("ThesGeoType")
+if geoType:
+    return getValue("ConstituentURI") + cleanURI("/", geoType)
+else:
+    return ""
+```
+
 
 ## Selections
 #### _DEFAULT_TEST_
@@ -100,6 +143,8 @@ return getValue("ConstituentType") != "Individual"
 | _AppellationaName_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
 | _Biography_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _BiographyURI_ | `uri` | `crm:E33_Linguistic_Object1`|
+| _ConGeoTGNSourceTermID_ | `rdfs:label` | `crm:E42_Identifier1`|
+| _ConGeoTGNSourceTermID_URI_ | `uri` | `crm:E42_Identifier1`|
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
 | _CreatorULANID_ | `rdfs:label` | `skos:Concept1`|
 | _DisplayName_ | `rdfs:label` | `crm:E39_Actor1`|
@@ -107,7 +152,10 @@ return getValue("ConstituentType") != "Individual"
 | _GenderTypeURI_ | `uri` | `crm:E55_Type2`|
 | _GenderURI_ | `uri` | `crm:E55_Type1`|
 | _ObjectID_URI_ | `uri` | `crm:E22_Man-Made_Object1`|
+| _PlaceURI_ | `uri` | `crm:E53_Place1`|
 | _Production_URI_ | `uri` | `crm:E12_Production1`|
+| _SpatialCoordinates_ | `rdfs:label` | `crm:E47_Spatial_Coordinates1`|
+| _ThesGeographyTerm_ | `rdfs:label` | `crm:E53_Place1`|
 | _ULANID_URI_ | `uri` | `skos:Concept1`|
 
 
@@ -122,6 +170,8 @@ return getValue("ConstituentType") != "Individual"
 | `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation1`|
 | `crm:E39_Actor1` | `crm:P2_has_type` | `crm:E55_Type1`|
 | `crm:E39_Actor1` | `skos:exactMatch` | `skos:Concept1`|
+| `crm:E53_Place1` | `crm:P1_is_identified_by` | `crm:E47_Spatial_Coordinates1`|
+| `crm:E53_Place1` | `crm:P48_has_preferred_identifier` | `crm:E42_Identifier1`|
 | `crm:E55_Type1` | `crm:P2_has_type` | `crm:E55_Type2`|
 | `crm:E55_Type2` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300055147`|
 | `crm:E82_Actor_Appellation1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
