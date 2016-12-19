@@ -18,6 +18,11 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
+#### Literal Node: `http://vocab.getty.edu/aat/300080102`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ObjectID_URI_
@@ -72,6 +77,12 @@ From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / Gende
 return getValue("ConstituentURI") + "/gender_type"
 ```
 
+#### _BiographyURI_
+From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / Biography_
+``` python
+return getValue("ConstituentURI") + "/biography"
+```
+
 
 ## Selections
 #### _DEFAULT_TEST_
@@ -87,6 +98,8 @@ return getValue("ConstituentType") != "Individual"
 |  ----- | -------- | ----- |
 | _AppellationURI_ | `uri` | `crm:E82_Actor_Appellation1`|
 | _AppellationaName_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
+| _Biography_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
+| _BiographyURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
 | _CreatorULANID_ | `rdfs:label` | `skos:Concept1`|
 | _DisplayName_ | `rdfs:label` | `crm:E39_Actor1`|
@@ -103,6 +116,9 @@ return getValue("ConstituentType") != "Individual"
 |  --- | -------- | ---|
 | `crm:E12_Production1` | `crm:P14_carried_out_by` | `crm:E39_Actor1`|
 | `crm:E22_Man-Made_Object1` | `crm:P108i_was_produced_by` | `crm:E12_Production1`|
+| `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300080102`|
+| `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
+| `crm:E39_Actor1` | `crm:P129i_is_subject_of` | `crm:E33_Linguistic_Object1`|
 | `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation1`|
 | `crm:E39_Actor1` | `crm:P2_has_type` | `crm:E55_Type1`|
 | `crm:E39_Actor1` | `skos:exactMatch` | `skos:Concept1`|
