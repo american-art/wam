@@ -37,9 +37,10 @@ n31[shape="plaintext",style="filled",fillcolor="gold",label="AppellationURI"];
 n32[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
 n33[shape="plaintext",style="filled",fillcolor="gold",label="AppellationaName"];
 n34[shape="plaintext",style="filled",fillcolor="gold",label="WorkURI"];
-n35[shape="plaintext",style="filled",fillcolor="gold",label="ULANID_URI"];
-n36[shape="plaintext",style="filled",fillcolor="gold",label="CreatorULANID"];
-n37[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/ulan"];
+n35[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300387357"];
+n36[shape="plaintext",style="filled",fillcolor="gold",label="ULANID_URI"];
+n37[shape="plaintext",style="filled",fillcolor="gold",label="CreatorULANID"];
+n38[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/ulan"];
 }
 n2 -> n3[color="brown",fontcolor="black",label="classLink"]
 n2 -> n4[color="brown",fontcolor="black",label="P14_carried_out_by"]
@@ -72,8 +73,9 @@ n13 -> n31[color="brown",fontcolor="black",label="classLink"]
 n13 -> n32[color="brown",fontcolor="black",label="P2_has_type"]
 n13 -> n33[color="brown",fontcolor="black",label="value"]
 n14 -> n34[color="brown",fontcolor="black",label="classLink"]
+n14 -> n35[color="brown",fontcolor="black",label="P21_had_general_purpose"]
 n14 -> n23[color="brown",fontcolor="black",label="P26_moved_to"]
-n17 -> n35[color="brown",fontcolor="black",label="classLink"]
-n17 -> n36[color="brown",fontcolor="black",label="label"]
-n17 -> n37[color="brown",fontcolor="black",label="inScheme"]
+n17 -> n36[color="brown",fontcolor="black",label="classLink"]
+n17 -> n37[color="brown",fontcolor="black",label="label"]
+n17 -> n38[color="brown",fontcolor="black",label="inScheme"]
 }
