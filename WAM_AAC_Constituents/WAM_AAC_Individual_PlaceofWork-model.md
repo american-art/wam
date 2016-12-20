@@ -23,6 +23,11 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
+#### Literal Node: `http://vocab.getty.edu/aat/300387357`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ObjectID_URI_
@@ -190,5 +195,6 @@ return getValue("ThesGeoType") != "Work Location"
 | `crm:E55_Type1` | `crm:P2_has_type` | `crm:E55_Type2`|
 | `crm:E55_Type2` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300055147`|
 | `crm:E82_Actor_Appellation1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
+| `crm:E9_Move1` | `crm:P21_had_general_purpose` | `xsd:http://vocab.getty.edu/aat/300387357`|
 | `crm:E9_Move1` | `crm:P26_moved_to` | `crm:E53_Place1`|
 | `skos:Concept1` | `skos:inScheme` | `xsd:http://vocab.getty.edu/ulan`|
