@@ -5,33 +5,33 @@ label="WAM_XMLExport_AAC_Dimensions.xml"
 subgraph cluster {
 label="model"
 n2[style="filled",color="white",fillcolor="lightgray",label="E18_Physical_Thing1"];
-n3[style="filled",color="white",fillcolor="lightgray",label="E54_Dimension1"];
-n4[style="filled",color="white",fillcolor="lightgray",label="E55_Type2"];
-n5[style="filled",color="white",fillcolor="lightgray",label="E22_Man-Made_Object1"];
-n6[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
-n7[shape="plaintext",style="filled",fillcolor="gold",label="Element"];
-n8[shape="plaintext",style="filled",fillcolor="gold",label="PhysicalThing_URI"];
-n9[shape="plaintext",style="filled",fillcolor="gold",label="ObjectID_URI"];
-n10[shape="plaintext",style="filled",fillcolor="gold",label="DimensionDetailURI"];
-n11[shape="plaintext",style="filled",fillcolor="gold",label="DimensionElement"];
-n12[shape="plaintext",style="filled",fillcolor="gold",label="DimensionType"];
+n3[shape="plaintext",style="filled",fillcolor="gold",label="PhysicalThing_URI"];
+n4[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
+n5[style="filled",color="white",fillcolor="lightgray",label="E54_Dimension1"];
+n6[shape="plaintext",style="filled",fillcolor="gold",label="Element"];
+n7[style="filled",color="white",fillcolor="lightgray",label="E22_Man-Made_Object1"];
+n8[shape="plaintext",style="filled",fillcolor="gold",label="ObjectID_URI"];
+n9[shape="plaintext",style="filled",fillcolor="gold",label="DimensionURI"];
+n10[style="filled",color="white",fillcolor="lightgray",label="E55_Type2"];
+n11[shape="plaintext",style="filled",fillcolor="gold",label="UnitLabel"];
+n12[shape="plaintext",style="filled",fillcolor="gold",label="Dimension"];
 n13[shape="plaintext",style="filled",fillcolor="gold",label="DimensionElementURI"];
-n14[shape="plaintext",style="filled",fillcolor="gold",label="UnitLabel"];
+n14[shape="plaintext",style="filled",fillcolor="gold",label="DimensionElement"];
 n15[shape="plaintext",style="filled",fillcolor="gold",label="DimensionTypeURI"];
-n16[shape="plaintext",style="filled",fillcolor="gold",label="Dimension"];
+n16[shape="plaintext",style="filled",fillcolor="gold",label="DimensionType"];
 }
-n2 -> n3[color="brown",fontcolor="black",label="P43_has_dimension"]
+n2 -> n3[color="brown",fontcolor="black",label="classLink"]
 n2 -> n4[color="brown",fontcolor="black",label="P2_has_type"]
-n5 -> n2[color="brown",fontcolor="black",label="P46_is_composed_of"]
-n3 -> n6[color="brown",fontcolor="black",label="P2_has_type"]
-n2 -> n7[color="brown",fontcolor="black",label="label"]
-n2 -> n8[color="brown",fontcolor="black",label="classLink"]
+n2 -> n5[color="brown",fontcolor="black",label="P43_has_dimension"]
+n2 -> n6[color="brown",fontcolor="black",label="label"]
+n7 -> n8[color="brown",fontcolor="black",label="classLink"]
+n7 -> n2[color="brown",fontcolor="black",label="P46_is_composed_of"]
 n5 -> n9[color="brown",fontcolor="black",label="classLink"]
-n3 -> n10[color="brown",fontcolor="black",label="classLink"]
-n4 -> n11[color="brown",fontcolor="black",label="label"]
-n6 -> n12[color="brown",fontcolor="black",label="prefLabel"]
+n5 -> n10[color="brown",fontcolor="black",label="P2_has_type"]
+n5 -> n11[color="brown",fontcolor="black",label="P91_has_unit"]
+n5 -> n12[color="brown",fontcolor="black",label="value"]
 n4 -> n13[color="brown",fontcolor="black",label="classLink"]
-n3 -> n14[color="brown",fontcolor="black",label="P91_has_unit"]
-n6 -> n15[color="brown",fontcolor="black",label="classLink"]
-n3 -> n16[color="brown",fontcolor="black",label="value"]
+n4 -> n14[color="brown",fontcolor="black",label="label"]
+n10 -> n15[color="brown",fontcolor="black",label="classLink"]
+n10 -> n16[color="brown",fontcolor="black",label="prefLabel"]
 }
