@@ -159,16 +159,11 @@ return getValue("ThesGeoType") != "Work Location"
 |  ----- | -------- | ----- |
 | _AppellationURI_ | `uri` | `crm:E82_Actor_Appellation1`|
 | _AppellationaName_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
-| _Biography_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
-| _BiographyURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _ConGeoTGNSourceTermID_ | `rdfs:label` | `crm:E42_Identifier1`|
 | _ConGeoTGNSourceTermID_URI_ | `uri` | `crm:E42_Identifier1`|
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
 | _CreatorULANID_ | `rdfs:label` | `skos:Concept1`|
 | _DisplayName_ | `rdfs:label` | `crm:E39_Actor1`|
-| _Gender_ | `rdfs:label` | `crm:E55_Type1`|
-| _GenderTypeURI_ | `uri` | `crm:E55_Type2`|
-| _GenderURI_ | `uri` | `crm:E55_Type1`|
 | _ObjectID_URI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _PlaceURI_ | `uri` | `crm:E53_Place1`|
 | _Production_URI_ | `uri` | `crm:E12_Production1`|
@@ -183,17 +178,11 @@ return getValue("ThesGeoType") != "Work Location"
 |  --- | -------- | ---|
 | `crm:E12_Production1` | `crm:P14_carried_out_by` | `crm:E39_Actor1`|
 | `crm:E22_Man-Made_Object1` | `crm:P108i_was_produced_by` | `crm:E12_Production1`|
-| `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300080102`|
-| `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
-| `crm:E39_Actor1` | `crm:P129i_is_subject_of` | `crm:E33_Linguistic_Object1`|
 | `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation1`|
 | `crm:E39_Actor1` | `crm:P25i_moved_by` | `crm:E9_Move1`|
-| `crm:E39_Actor1` | `crm:P2_has_type` | `crm:E55_Type1`|
 | `crm:E39_Actor1` | `skos:exactMatch` | `skos:Concept1`|
 | `crm:E53_Place1` | `crm:P1_is_identified_by` | `crm:E47_Spatial_Coordinates1`|
 | `crm:E53_Place1` | `crm:P48_has_preferred_identifier` | `crm:E42_Identifier1`|
-| `crm:E55_Type1` | `crm:P2_has_type` | `crm:E55_Type2`|
-| `crm:E55_Type2` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300055147`|
 | `crm:E82_Actor_Appellation1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
 | `crm:E9_Move1` | `crm:P21_had_general_purpose` | `xsd:http://vocab.getty.edu/aat/300387357`|
 | `crm:E9_Move1` | `crm:P26_moved_to` | `crm:E53_Place1`|
