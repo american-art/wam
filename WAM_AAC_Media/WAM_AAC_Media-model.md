@@ -34,6 +34,7 @@ return getValue("ImageURI") + "/image_rights"
 ## Semantic Types
 | Column | Property | Class |
 |  ----- | -------- | ----- |
+| _FullImageURL_ | `rdfs:label` | `crm:E38_Image1`|
 | _ImageRights_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _ImageRightsURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _ImageURI_ | `uri` | `crm:E38_Image1`|
