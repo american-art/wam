@@ -26,7 +26,7 @@ return getValue("Element")
 #### _DimensionElementURI_
 From column: _Root / ObjRecord / Dimensions / DimensionType / DimensionElement_
 ``` python
-return getValue("PhysicalThing_URI") + getValue("Element").lower() + "/dimension/id/" + getValue("DimensionID")
+return getValue("PhysicalThing_URI") + getValue("Element").lower() + "/dimension/id/" + getValue("DimItemElemXrefID")
 ```
 
 #### _DimensionTypeURI_
