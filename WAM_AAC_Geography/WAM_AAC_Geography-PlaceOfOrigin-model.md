@@ -44,7 +44,7 @@ else:
 #### _PlaceURI_
 From column: _Root / ObjRecord / ObjectRelatedGeography / Geography / GeographyID_
 ``` python
-return getValue("ProductionURI") + "/geography/id/" + getValue("GeographyID")
+return getValue("ProductionURI") + "/geography_id/" + getValue("GeographyID")
 ```
 
 #### _LatitudeURI_
