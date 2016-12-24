@@ -27,9 +27,7 @@ Fork of American-Art/wam, a repository of XML data about American Art at The Wal
 8. [AAC Target Mapping For Classification] (http://review.americanartcollaborative.org/entity/E22_Man-Made_Object#field_9-search_0	 ):  http://data.thewalters.org/object/id/32192
 
 ######WAM_AAC_Geography
-```diff
-- 1. [AAC Target Mapping For Creation Location] (	http://review.americanartcollaborative.org/entity/E22_Man-Made_Object#field_5-search_0 ) : http://data.thewalters.org/object/id/6301
-```
+1. [AAC Target Mapping For Creation Location] (	http://review.americanartcollaborative.org/entity/E22_Man-Made_Object#field_5-search_0 ) : http://data.thewalters.org/object/id/6301
 
 ######WAM_AAC_Dimensions
 1. [AAC Target Mapping For Dimensions (Part)] (	http://review.americanartcollaborative.org/entity/E22_Man-Made_Object#field_19-search_0	 ) : http://data.thewalters.org/object/id/40457
