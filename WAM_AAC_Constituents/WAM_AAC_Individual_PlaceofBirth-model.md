@@ -103,7 +103,7 @@ else:
     return "\"" + format_latLong(lat)  + " " + latDir +  " " + format_latLong(long) + " " +longDir + "\""
 ```
 
-#### _ConGeoTGNSourceTermID_URI_
+#### _ConGeoTGNSourceTermID_URL_
 From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentGeography / ConstituentGeography / ConGeoTGNSourceTermID_
 ``` python
 conGeoTGNSourceTermID = getValue("ConGeoTGNSourceTermID")
@@ -132,6 +132,26 @@ From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / Const
 return getValue("BirthURI") + "/" + getValue("ConGeoTGNSourceTermID")
 ```
 
+#### _ConGeoTGNSourceTermID_URI_
+From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentGeography / ConstituentGeography / ConGeoTGNSourceTermID_URL_
+``` python
+conGeoTGNSourceTermID = getValue("ConGeoTGNSourceTermID")
+if conGeoTGNSourceTermID:
+    return getValue("PlaceURI") + "/tgn_term"
+else:
+    return ""
+```
+
+#### _SpatialCoordinatesURI_
+From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentGeography / ConstituentGeography / SpatialCoordinates_
+``` python
+lat_long = getValue("SpatialCoordinates")
+if lat_long:
+    return getValue("PlaceURI") + "/lat_long"
+else:
+    return ""
+```
+
 
 ## Selections
 #### _DEFAULT_TEST_
@@ -156,8 +176,9 @@ return getValue("ThesGeoType") != "Birth Location"
 | _AppellationaName_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
 | _Biography_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _BiographyURI_ | `uri` | `crm:E33_Linguistic_Object1`|
-| _ConGeoTGNSourceTermID_ | `rdfs:label` | `crm:E42_Identifier1`|
+| _BirthURI_ | `uri` | `crm:E63_Beginning_of_Existence1`|
 | _ConGeoTGNSourceTermID_URI_ | `uri` | `crm:E42_Identifier1`|
+| _ConGeoTGNSourceTermID_URL_ | `rdfs:label` | `crm:E42_Identifier1`|
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
 | _CreatorULANID_ | `rdfs:label` | `skos:Concept1`|
 | _DisplayName_ | `rdfs:label` | `crm:E39_Actor1`|
@@ -166,9 +187,9 @@ return getValue("ThesGeoType") != "Birth Location"
 | _GenderURI_ | `uri` | `crm:E55_Type1`|
 | _ObjectID_URI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _PlaceURI_ | `uri` | `crm:E53_Place1`|
-| _PlaceURI_ | `uri` | `crm:E63_Beginning_of_Existence1`|
 | _Production_URI_ | `uri` | `crm:E12_Production1`|
 | _SpatialCoordinates_ | `rdfs:label` | `crm:E47_Spatial_Coordinates1`|
+| _SpatialCoordinatesURI_ | `uri` | `crm:E47_Spatial_Coordinates1`|
 | _ThesGeographyTerm_ | `rdfs:label` | `crm:E53_Place1`|
 | _ULANID_URI_ | `uri` | `skos:Concept1`|
 
