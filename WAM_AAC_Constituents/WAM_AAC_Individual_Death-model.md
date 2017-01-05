@@ -45,13 +45,6 @@ return getValue("DeathURI") + "/" + getValue("ConGeoTGNSourceTermID")
 
 ## Selections
 #### _DEFAULT_TEST_
-From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / Gender_
-<br>Operation: `Union`
-``` python
-return getValue("ConstituentType") != "Individual"
-```
-
-#### _DEFAULT_TEST_
 From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentGeography / ConstituentGeography / ConGeoLatDirection_
 <br>Operation: `Union`
 ``` python
