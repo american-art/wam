@@ -163,8 +163,6 @@ return getValue("ExhibitionID") == ""
 | _ExhibitionTimeSpanURI_ | `uri` | `crm:E52_Time-Span1`|
 | _ExhibitionURI_ | `uri` | `crm:E5_Event1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
-| _PreferredLabel_ | `skos:prefLabel` | `crm:E55_Type1`|
-| _PreferredLabelURI_ | `uri` | `crm:E55_Type1`|
 | _VenueBegDate_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
 | _VenueDateURI_ | `uri` | `crm:E52_Time-Span2`|
 | _VenueDisplayName_ | `rdfs:label` | `crm:E93_Presence1`|
@@ -175,11 +173,10 @@ return getValue("ExhibitionID") == ""
 | From | Property | To |
 |  --- | -------- | ---|
 | `crm:E22_Man-Made_Object1` | `crm:P12i_was_present_at` | `crm:E5_Event1`|
-| `crm:E41_Appellation1` | `crm:P2_has_type` | `crm:E55_Type1`|
-| `crm:E55_Type1` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300404670`|
+| `crm:E41_Appellation1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
 | `crm:E5_Event1` | `crm:P129_is_about` | `crm:E33_Linguistic_Object1`|
+| `crm:E5_Event1` | `crm:P166i_had_presence` | `crm:E93_Presence1`|
 | `crm:E5_Event1` | `crm:P1_is_identified_by` | `crm:E41_Appellation1`|
 | `crm:E5_Event1` | `crm:P48_has_preferred_identifier` | `crm:E42_Identifier2`|
 | `crm:E5_Event1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
-| `crm:E5_Event1` | `crm:P166i_had_presence` | `crm:E93_Presence1`|
 | `crm:E93_Presence1` | `crm:P164_during` | `crm:E52_Time-Span2`|
