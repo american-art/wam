@@ -5,59 +5,53 @@ label="WAM_XMLExport_AAC_Exhibitions.xml"
 subgraph cluster {
 label="model"
 n2[style="filled",color="white",fillcolor="lightgray",label="E22_Man-Made_Object1"];
-n3[style="filled",color="white",fillcolor="lightgray",label="E5_Event1"];
-n4[style="filled",color="white",fillcolor="lightgray",label="E41_Appellation1"];
-n5[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
-n6[style="filled",color="white",fillcolor="lightgray",label="E33_Linguistic_Object1"];
-n7[style="filled",color="white",fillcolor="lightgray",label="E42_Identifier2"];
-n8[style="filled",color="white",fillcolor="lightgray",label="E52_Time-Span1"];
-n9[style="filled",color="white",fillcolor="lightgray",label="E93_Presence1"];
-n10[style="filled",color="white",fillcolor="lightgray",label="E52_Time-Span2"];
-n11[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionTimeSpanURI"];
-n12[shape="plaintext",style="filled",fillcolor="gold",label="ExhEndISODate"];
-n13[shape="plaintext",style="filled",fillcolor="gold",label="ExhBeginISODate"];
-n14[shape="plaintext",style="filled",fillcolor="gold",label="VenueDateURI"];
-n15[shape="plaintext",style="filled",fillcolor="gold",label="ExhibCitation"];
-n16[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionID"];
-n17[shape="plaintext",style="filled",fillcolor="gold",label="VenueBegDate"];
-n18[shape="plaintext",style="filled",fillcolor="gold",label="VenueDisplayName"];
-n19[shape="plaintext",style="filled",fillcolor="gold",label="VenueEndDate"];
-n20[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionID_URI"];
-n21[shape="plaintext",style="filled",fillcolor="gold",label="ExhTitle"];
-n22[shape="plaintext",style="filled",fillcolor="gold",label="ExhVenueURI"];
-n23[shape="plaintext",style="filled",fillcolor="gold",label="PreferredLabelURI"];
-n24[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
-n25[shape="plaintext",style="filled",fillcolor="gold",label="PreferredLabel"];
-n26[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionAppellationURI"];
-n27[shape="plaintext",style="filled",fillcolor="gold",label="ExhibCitationURI"];
-n28[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionURI"];
-n29[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
+n3[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
+n4[style="filled",color="white",fillcolor="lightgray",label="E5_Event1"];
+n5[style="filled",color="white",fillcolor="lightgray",label="E33_Linguistic_Object1"];
+n6[shape="plaintext",style="filled",fillcolor="gold",label="ExhibCitationURI"];
+n7[shape="plaintext",style="filled",fillcolor="gold",label="ExhibCitation"];
+n8[style="filled",color="white",fillcolor="lightgray",label="E41_Appellation1"];
+n9[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionAppellationURI"];
+n10[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
+n11[shape="plaintext",style="filled",fillcolor="gold",label="ExhTitle"];
+n12[style="filled",color="white",fillcolor="lightgray",label="E42_Identifier2"];
+n13[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionID_URI"];
+n14[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionID"];
+n15[style="filled",color="white",fillcolor="lightgray",label="E52_Time-Span1"];
+n16[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionTimeSpanURI"];
+n17[shape="plaintext",style="filled",fillcolor="gold",label="ExhBeginISODate"];
+n18[shape="plaintext",style="filled",fillcolor="gold",label="ExhEndISODate"];
+n19[style="filled",color="white",fillcolor="lightgray",label="E52_Time-Span2"];
+n20[shape="plaintext",style="filled",fillcolor="gold",label="VenueDateURI"];
+n21[shape="plaintext",style="filled",fillcolor="gold",label="VenueBegDate"];
+n22[shape="plaintext",style="filled",fillcolor="gold",label="VenueEndDate"];
+n23[shape="plaintext",style="filled",fillcolor="gold",label="ExhibitionURI"];
+n24[style="filled",color="white",fillcolor="lightgray",label="E93_Presence1"];
+n25[shape="plaintext",style="filled",fillcolor="gold",label="ExhVenueURI"];
+n26[shape="plaintext",style="filled",fillcolor="gold",label="VenueDisplayName"];
 }
-n2 -> n3[color="brown",fontcolor="black",label="P12i_was_present_at"]
-n4 -> n5[color="brown",fontcolor="black",label="P2_has_type"]
-n3 -> n6[color="brown",fontcolor="black",label="P129_is_about"]
-n3 -> n4[color="brown",fontcolor="black",label="P1_is_identified_by"]
-n3 -> n7[color="brown",fontcolor="black",label="P48_has_preferred_identifier"]
-n3 -> n8[color="brown",fontcolor="black",label="P4_has_time-span"]
-n3 -> n9[color="brown",fontcolor="black",label="P166i_had_presence"]
-n9 -> n10[color="brown",fontcolor="black",label="P164_during"]
-n8 -> n11[color="brown",fontcolor="black",label="classLink"]
-n8 -> n12[color="brown",fontcolor="black",label="P82b_end_of_the_end"]
-n8 -> n13[color="brown",fontcolor="black",label="P82a_begin_of_the_begin"]
-n10 -> n14[color="brown",fontcolor="black",label="classLink"]
-n6 -> n15[color="brown",fontcolor="black",label="P3_has_note"]
-n7 -> n16[color="brown",fontcolor="black",label="label"]
-n10 -> n17[color="brown",fontcolor="black",label="P82a_begin_of_the_begin"]
-n9 -> n18[color="brown",fontcolor="black",label="label"]
-n10 -> n19[color="brown",fontcolor="black",label="P82b_end_of_the_end"]
-n7 -> n20[color="brown",fontcolor="black",label="classLink"]
-n4 -> n21[color="brown",fontcolor="black",label="value"]
-n9 -> n22[color="brown",fontcolor="black",label="classLink"]
-n5 -> n23[color="brown",fontcolor="black",label="classLink"]
-n2 -> n24[color="brown",fontcolor="black",label="classLink"]
-n5 -> n25[color="brown",fontcolor="black",label="prefLabel"]
-n4 -> n26[color="brown",fontcolor="black",label="classLink"]
-n6 -> n27[color="brown",fontcolor="black",label="classLink"]
-n3 -> n28[color="brown",fontcolor="black",label="classLink"]
-n5 -> n29[color="brown",fontcolor="black",label="broadMatch"]
+n2 -> n3[color="brown",fontcolor="black",label="classLink"]
+n2 -> n4[color="brown",fontcolor="black",label="P12i_was_present_at"]
+n5 -> n6[color="brown",fontcolor="black",label="classLink"]
+n5 -> n7[color="brown",fontcolor="black",label="P3_has_note"]
+n8 -> n9[color="brown",fontcolor="black",label="classLink"]
+n8 -> n10[color="brown",fontcolor="black",label="P2_has_type"]
+n8 -> n11[color="brown",fontcolor="black",label="value"]
+n12 -> n13[color="brown",fontcolor="black",label="classLink"]
+n12 -> n14[color="brown",fontcolor="black",label="label"]
+n15 -> n16[color="brown",fontcolor="black",label="classLink"]
+n15 -> n17[color="brown",fontcolor="black",label="P82a_begin_of_the_begin"]
+n15 -> n18[color="brown",fontcolor="black",label="P82b_end_of_the_end"]
+n19 -> n20[color="brown",fontcolor="black",label="classLink"]
+n19 -> n21[color="brown",fontcolor="black",label="P82a_begin_of_the_begin"]
+n19 -> n22[color="brown",fontcolor="black",label="P82b_end_of_the_end"]
+n4 -> n23[color="brown",fontcolor="black",label="classLink"]
+n4 -> n5[color="brown",fontcolor="black",label="P129_is_about"]
+n4 -> n24[color="brown",fontcolor="black",label="P166i_had_presence"]
+n4 -> n8[color="brown",fontcolor="black",label="P1_is_identified_by"]
+n4 -> n12[color="brown",fontcolor="black",label="P48_has_preferred_identifier"]
+n4 -> n15[color="brown",fontcolor="black",label="P4_has_time-span"]
+n24 -> n25[color="brown",fontcolor="black",label="classLink"]
+n24 -> n19[color="brown",fontcolor="black",label="P164_during"]
+n24 -> n26[color="brown",fontcolor="black",label="label"]
 }
