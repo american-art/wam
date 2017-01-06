@@ -34,14 +34,14 @@ Fork of American-Art/wam, a repository of XML data about American Art at The Wal
 
 ######WAM_AAC_Titles
 1. [AAC Target Mapping For Primary Title] (		http://review.americanartcollaborative.org/entity/E22_Man-Made_Object#field_0-search_0 ) : http://data.thewalters.org/object/id/37391
-- 2. [AAC Target Mapping For Alternate Titles	] (	http://review.americanartcollaborative.org/entity/E22_Man-Made_Object#field_1-search_0 ) : http://data.thewalters.org/object/id/39053
+2. [AAC Target Mapping For Alternate Titles	] (	http://review.americanartcollaborative.org/entity/E22_Man-Made_Object#field_1-search_0 ) : http://data.thewalters.org/object/id/39053
 
 ######WAM_AAC_Constituents
 1. [AAC Target Mapping For Primary Name] (		http://review.americanartcollaborative.org/entity/E39_Actor#field_0-search_0 ) : http://data.thewalters.org/object/id/13509/production/individual/4486
 2. [AAC Target Mapping For Gender] (		http://review.americanartcollaborative.org/entity/E39_Actor#field_12-search_0 ) : http://data.thewalters.org/object/id/17997/production/individual/4486
 3. [AAC Target Mapping For Biography	] (	http://review.americanartcollaborative.org/entity/E39_Actor#field_16-search_0 ) : http://data.thewalters.org/object/id/720/production/individual/4721
-- 4. [AAC Target Mapping For Birth	] (		http://review.americanartcollaborative.org/entity/E39_Actor#field_14-search_0 ) : http://data.thewalters.org/object/id/333/production/individual/7142
-- 5. [AAC Target Mapping For Death	] (		http://review.americanartcollaborative.org/entity/E39_Actor#field_15-search_0 ) : http://data.thewalters.org/object/id/333/production/individual/7142
+4. [AAC Target Mapping For Birth	] (		http://review.americanartcollaborative.org/entity/E39_Actor#field_14-search_0 ) : http://data.thewalters.org/object/id/333/production/individual/7142
+5. [AAC Target Mapping For Death	] (		http://review.americanartcollaborative.org/entity/E39_Actor#field_15-search_0 ) : http://data.thewalters.org/object/id/333/production/individual/7142
 
 ######WAM_AAC_Media
 1. [AAC Target Mapping For Image	] (		http://review.americanartcollaborative.org/entity/E22_Man-Made_Object#field_30-search_0 ) : http://data.thewalters.org/object/id/32192
