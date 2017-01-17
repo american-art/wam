@@ -25,7 +25,7 @@ return getValue("ObjectID_URI") + "/" + getValue("MediaView").lower() + "/media/
 #### _ImageRightsURI_
 From column: _Root / ObjRecord / ObjectRelatedMedia / Media / ImageRights_
 ``` python
-return getValue("ImageURI") + "/image_rights"
+return getValue("ObjectID_URI") + "/" + getValue("MediaView").lower() + "/" + getValue("MediaXrefID") + "/image_rights"
 ```
 
 
