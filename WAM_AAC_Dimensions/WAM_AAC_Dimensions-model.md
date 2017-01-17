@@ -41,13 +41,19 @@ From column: _Root / ObjRecord / Dimensions / DimensionType / DimensionPart / Di
 return getValue("DimensionElementURI") + "/value/" + getValue("DimensionType").lower()
 ```
 
+#### _DimensionCleaned_
+From column: _Root / ObjRecord / Dimensions / DimensionType / DimensionPart / Dimension_
+``` python
+return '{0:.1f}'.format(float(getValue("Dimension")))
+```
+
 
 ## Selections
 
 ## Semantic Types
 | Column | Property | Class |
 |  ----- | -------- | ----- |
-| _Dimension_ | `rdf:value` | `crm:E54_Dimension1`|
+| _DimensionCleaned_ | `rdf:value` | `crm:E54_Dimension1`|
 | _DimensionElement_ | `rdfs:label` | `crm:E55_Type1`|
 | _DimensionElementURI_ | `uri` | `crm:E55_Type1`|
 | _DimensionType_ | `skos:prefLabel` | `crm:E55_Type2`|
@@ -62,7 +68,7 @@ return getValue("DimensionElementURI") + "/value/" + getValue("DimensionType").l
 ## Links
 | From | Property | To |
 |  --- | -------- | ---|
-| `crm:E18_Physical_Thing1` | `crm:P2_has_type` | `crm:E55_Type1`|
 | `crm:E18_Physical_Thing1` | `crm:P43_has_dimension` | `crm:E54_Dimension1`|
+| `crm:E18_Physical_Thing1` | `crm:P2_has_type` | `crm:E55_Type1`|
 | `crm:E22_Man-Made_Object1` | `crm:P46_is_composed_of` | `crm:E18_Physical_Thing1`|
 | `crm:E54_Dimension1` | `crm:P2_has_type` | `crm:E55_Type2`|
