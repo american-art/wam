@@ -44,7 +44,7 @@ return getValue("DimensionElementURI") + "/value/" + getValue("DimensionType").l
 #### _DimensionCleaned_
 From column: _Root / ObjRecord / Dimensions / DimensionType / DimensionPart / Dimension_
 ``` python
-return '{0:.1f}'.format(float(getValue("Dimension")))
+return str(int(float(getValue("Dimension"))*10)/10.0)
 ```
 
 
