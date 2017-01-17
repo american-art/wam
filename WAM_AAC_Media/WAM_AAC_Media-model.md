@@ -28,15 +28,24 @@ From column: _Root / ObjRecord / ObjectRelatedMedia / Media / ImageRights_
 return getValue("ObjectID_URI") + "/" + getValue("MediaView").lower() + "/" + getValue("MediaXrefID") + "/image_rights"
 ```
 
+#### _ImageURL_
+From column: _Root / ObjRecord / ObjectRelatedMedia / Media / FullImageURL_
+``` python
+if getValue("MediaDispRank")=='1':
+    return getValue("FullImageURL")
+else:
+    return ""
+```
+
 
 ## Selections
 
 ## Semantic Types
 | Column | Property | Class |
 |  ----- | -------- | ----- |
-| _FullImageURL_ | `uri` | `crm:E38_Image1`|
 | _ImageRights_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _ImageRightsURI_ | `uri` | `crm:E33_Linguistic_Object1`|
+| _ImageURL_ | `uri` | `crm:E38_Image1`|
 | _ObjectID_URI_ | `uri` | `crm:E22_Man-Made_Object1`|
 
 
