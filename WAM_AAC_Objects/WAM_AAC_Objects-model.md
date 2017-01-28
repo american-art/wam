@@ -99,6 +99,12 @@ From column: _Root / ObjRecord / PublicDescription_
 return getValue("ResourceURL")
 ```
 
+#### _CurrentOwnerURI_
+From column: _Root / ObjRecord / Inscription_
+``` python
+return getValue("ObjectURI")+"/current_owner"
+```
+
 
 ## Selections
 
@@ -110,6 +116,7 @@ return getValue("ResourceURL")
 | _ClassificationURI_ | `uri` | `crm:E55_Type1`|
 | _CreditLine_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _CreditLineURI_ | `uri` | `crm:E33_Linguistic_Object1`|
+| _CurrentOwnerURI_ | `uri` | `crm:E40_Legal_Body1`|
 | _DateBegin_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
 | _DateEnd_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | _Dated_ | `rdfs:label` | `crm:E52_Time-Span1`|
@@ -118,6 +125,7 @@ return getValue("ResourceURL")
 | _MediumLodTerm_ | `uri` | `owl:Thing1`|
 | _MediumTermURI_ | `uri` | `crm:E57_Material1`|
 | _MediumURI_ | `uri` | `crm:E33_Linguistic_Object2`|
+| _ObjUnderJurisOf_ | `rdfs:label` | `crm:E40_Legal_Body1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _ProductionTimespanURI_ | `uri` | `crm:E52_Time-Span1`|
 | _ProductionURI_ | `uri` | `crm:E12_Production1`|
@@ -138,6 +146,7 @@ return getValue("ResourceURL")
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object1`|
 | `crm:E22_Man-Made_Object1` | `crm:P129i_is_subject_of` | `crm:E33_Linguistic_Object2`|
 | `crm:E22_Man-Made_Object1` | `crm:P129i_is_subject_of` | `crm:E33_Linguistic_Object3`|
+| `crm:E22_Man-Made_Object1` | `crm:P52_has_current_owner` | `crm:E40_Legal_Body1`|
 | `crm:E22_Man-Made_Object1` | `crm:P45_consists_of` | `crm:E57_Material1`|
 | `crm:E22_Man-Made_Object1` | `crm:P129i_is_subject_of` | `crm:E33_Linguistic_Object1`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object2`|
