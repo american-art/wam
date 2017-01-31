@@ -1,0 +1,1738 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix wot: <http://xmlns.com/wot/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix karma: <http://isi.edu/integration/karma/ontologies/model/current#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node1b7r57p0rx1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "WAM_XMLExport_AAC_Geography.xml" ;
+	km-dev:modelPublicationTime "1485896410140"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedGeography\"},{\"columnName\":\"Geography\"},{\"columnName\":\"Latitude\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedGeography\"},{\"columnName\":\"Geography\"},{\"columnName\":\"Longitude\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedGeography\"},{\"columnName\":\"Geography\"},{\"columnName\":\"GeographyTerm\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedGeography\"},{\"columnName\":\"Geography\"},{\"columnName\":\"LatitudeDirection\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectID\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedGeography\"},{\"columnName\":\"Geography\"},{\"columnName\":\"LongitudeDirection\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedGeography\"},{\"columnName\":\"Geography\"},{\"columnName\":\"LatitudeValue\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedGeography\"},{\"columnName\":\"Geography\"},{\"columnName\":\"LongitudeValue\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedGeography\"},{\"columnName\":\"Geography\"},{\"columnName\":\"GeographyTerm\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedGeography\"},{\"columnName\":\"Geography\"},{\"columnName\":\"LatitudeURI\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedGeography\"},{\"columnName\":\"Geography\"},{\"columnName\":\"ProductionURI\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedGeography\"},{\"columnName\":\"Geography\"},{\"columnName\":\"GeoType\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedGeography\"},{\"columnName\":\"Geography\"},{\"columnName\":\"PlaceURI\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectURI\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedGeography\"},{\"columnName\":\"Geography\"},{\"columnName\":\"LongitudeURI\"}]]" ;
+	km-dev:hasModelLabel "WAM_XMLExport_AAC_Geography.xml" ;
+	km-dev:hasBaseURI "http://localhost:8080/source/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectID\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"ObjectURI\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return \\\"object/\\\"+getValue(\\\"ObjectID\\\")\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectID\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectRelatedGeography\"},
+                    {\"columnName\": \"Geography\"},
+                    {\"columnName\": \"GeoType\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"ProductionURI\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return getValue(\\\"ObjectURI\\\")+\\\"/production\\\"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"ProductionURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectRelatedGeography\"},
+                    {\"columnName\": \"Geography\"},
+                    {\"columnName\": \"GeographyID\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"PlaceURI\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return getValue(\\\"ProductionURI\\\")+\\\"/place\\\"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"ProductionURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"PlaceURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectRelatedGeography\"},
+                    {\"columnName\": \"Geography\"},
+                    {\"columnName\": \"LatitudeNumber\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"LatitudeURI\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return getValue(\\\"PlaceURI\\\")+\\\"/latitude\\\"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"PlaceURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"LatitudeURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectRelatedGeography\"},
+                    {\"columnName\": \"Geography\"},
+                    {\"columnName\": \"LatitudeNumber\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"LatitudeValue\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"def format_latLong(str):\\n    deg = u\\\"\\\\u00b0\\\"  # utf code for degree\\n    dim = str.split(' ')\\n    if len(dim) == 2:\\n        return dim[0].lstrip('0') + deg + dim[1] + \\\"\\\\'\\\"\\n    else:\\n        return \\\"\\\"\\nlat = getValue(\\\"Latitude\\\")\\nlatDir = getValue(\\\"LatitudeDirection\\\")\\nlong = getValue(\\\"Longitude\\\")\\nlongDir = getValue(\\\"LongitudeDirection\\\")\\nif longDir == \\\"\\\" or latDir == \\\"\\\" or long == \\\"\\\" or lat == \\\"\\\":\\n    return \\\"\\\"\\nelse:\\n    return \\\"\\\\\\\"\\\" + format_latLong(lat)  + \\\" \\\" + latDir +  \\\"\\\\\\\"\\\"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"Latitude\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"Longitude\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"LatitudeDirection\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"LongitudeDirection\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"LatitudeValue\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectRelatedGeography\"},
+                    {\"columnName\": \"Geography\"},
+                    {\"columnName\": \"LongitudeNumber\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"LongitudeURI\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return getValue(\\\"PlaceURI\\\")+\\\"/longitude\\\"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"PlaceURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"LongitudeURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectRelatedGeography\"},
+                    {\"columnName\": \"Geography\"},
+                    {\"columnName\": \"LongitudeNumber\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"LongitudeValue\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"def format_latLong(str):\\n    deg = u\\\"\\\\u00b0\\\"  # utf code for degree\\n    dim = str.split(' ')\\n    if len(dim) == 2:\\n        return dim[0].lstrip('0') + deg + dim[1] + \\\"\\\\'\\\"\\n    else:\\n        return \\\"\\\"\\nlat = getValue(\\\"Latitude\\\")\\nlatDir = getValue(\\\"LatitudeDirection\\\")\\nlong = getValue(\\\"Longitude\\\")\\nlongDir = getValue(\\\"LongitudeDirection\\\")\\nif longDir == \\\"\\\" or latDir == \\\"\\\" or long == \\\"\\\" or lat == \\\"\\\":\\n    return \\\"\\\"\\nelse:\\n    return \\\"\\\\\\\"\\\" + format_latLong(long) + \\\" \\\" +longDir + \\\"\\\\\\\"\\\"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"Latitude\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"Longitude\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"LatitudeDirection\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"LongitudeDirection\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"LongitudeValue\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"properties\",
+                \"value\": {
+                    \"hasServiceProperties\": false,
+                    \"hasPrefix\": false,
+                    \"graphLabel\": \"\",
+                    \"hasGithubURL\": true,
+                    \"GithubURL\": \"https://github.com/american-art/wam/tree/master/WAM_AAC_Geography\",
+                    \"hasBaseURI\": false,
+                    \"baseURI\": \"\"
+                },
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetWorksheetPropertiesCommand\"
+    },
+    {
+        \"tags\": [\"Selection\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectRelatedGeography\"},
+                    {\"columnName\": \"Geography\"},
+                    {\"columnName\": \"LatitudeNumber\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"pythonCode\",
+                \"value\": \"return getValue(\\\"GeoType\\\")!=\\\"Place of Origin\\\"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"operation\",
+                \"value\": \"Union\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"onError\",
+                \"value\": \"true\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"GeoType\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"OperateSelectionCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectURI\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"crm:E22_Man-Made_Object1 (add)\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\",
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"language\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectRelatedGeography\"},
+                    {\"columnName\": \"Geography\"},
+                    {\"columnName\": \"ProductionURI\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"crm:E12_Production1\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production1\",
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"language\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"ProductionURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"ProductionURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectRelatedGeography\"},
+                    {\"columnName\": \"Geography\"},
+                    {\"columnName\": \"PlaceURI\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E53_Place\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E53_Place1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"crm:E53_Place1\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E53_Place1\",
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E53_Place\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"language\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"PlaceURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"PlaceURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectRelatedGeography\"},
+                    {\"columnName\": \"Geography\"},
+                    {\"columnName\": \"LatitudeURI\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"crm:E47_Spatial_Coordinates1\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates1\",
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"language\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"LatitudeURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"LatitudeURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectRelatedGeography\"},
+                    {\"columnName\": \"Geography\"},
+                    {\"columnName\": \"LatitudeValue\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/1999/02/22-rdf-syntax-ns#value\",
+                    \"DomainLabel\": \"crm:E47_Spatial_Coordinates1\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates1\",
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"language\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"LatitudeValue\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"LatitudeValue\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectRelatedGeography\"},
+                    {\"columnName\": \"Geography\"},
+                    {\"columnName\": \"LongitudeURI\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates2\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"crm:E47_Spatial_Coordinates2\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates2\",
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"language\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"LongitudeURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"LongitudeURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectRelatedGeography\"},
+                    {\"columnName\": \"Geography\"},
+                    {\"columnName\": \"LongitudeValue\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/1999/02/22-rdf-syntax-ns#value\",
+                    \"DomainLabel\": \"crm:E47_Spatial_Coordinates2\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates2\",
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"language\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"LongitudeValue\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"LongitudeValue\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectRelatedGeography\"},
+                    {\"columnName\": \"Geography\"},
+                    {\"columnName\": \"GeographyTerm\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
+                    \"DomainLabel\": \"crm:E53_Place1\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E53_Place1\",
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E53_Place\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"language\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"GeographyTerm\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedGeography\\\"},{\\\"columnName\\\":\\\"Geography\\\"},{\\\"columnName\\\":\\\"GeographyTerm\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"literalValue\",
+                \"value\": \"http://vocab.getty.edu/aat/300387565\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"literalType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"language\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"isUri\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"AddLiteralNodeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"literalValue\",
+                \"value\": \"http://vocab.getty.edu/aat/300387567\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"literalType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"language\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"isUri\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"AddLiteralNodeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP3:WS5AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by\",
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production1\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP3:WS5AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E53_Place\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at\",
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E53_Place1\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP3:WS5AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by\",
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates1\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E53_Place1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E53_Place\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP3:WS5AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by\",
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates2\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E53_Place1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E53_Place\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://vocab.getty.edu/aat/300387565\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P2_has_type\",
+                    \"edgeTargetId\": \"http://vocab.getty.edu/aat/3003875651\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://vocab.getty.edu/aat/300387567\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P2_has_type\",
+                    \"edgeTargetId\": \"http://vocab.getty.edu/aat/3003875671\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates2\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    }
+]""" .
+
+km-dev:TriplesMap_17f19e78-65cd-4723-b11c-0799169248d3 a rr:TriplesMap .
+
+_:node1b7r57p0rx1 km-dev:hasTriplesMap km-dev:TriplesMap_17f19e78-65cd-4723-b11c-0799169248d3 .
+
+km-dev:TriplesMap_17f19e78-65cd-4723-b11c-0799169248d3 km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx2 rr:tableName "WAM_XMLExport_AAC_Geography.xml" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasLogicalTable _:node1b7r57p0rx2 .
+
+km-dev:TriplesMap_17f19e78-65cd-4723-b11c-0799169248d3 rr:logicalTable _:node1b7r57p0rx2 ;
+	rr:subjectMap _:node1b7r57p0rx3 .
+
+_:node1b7r57p0rx1 km-dev:hasSubjectMap _:node1b7r57p0rx3 .
+
+_:node1b7r57p0rx3 km-dev:isPartOfMapping _:node1b7r57p0rx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E12_Production1" ;
+	rr:class crm:E12_Production ;
+	rr:template "{[\"Root\",\"ObjRecord\",\"ObjectURI\"]}/production" .
+
+km-dev:PredicateObjectMap_9b236cde-2c9f-40dd-a22a-597893ed1fad rr:predicate crm:P7_took_place_at .
+
+km-dev:RefObjectMap_f4f74d71-e106-44ea-9e54-6b110c7638e9 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_6aca9fa9-9bf9-4546-ac32-fe6816ee8045 ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasObjectMap km-dev:RefObjectMap_f4f74d71-e106-44ea-9e54-6b110c7638e9 .
+
+km-dev:PredicateObjectMap_9b236cde-2c9f-40dd-a22a-597893ed1fad rr:objectMap km-dev:RefObjectMap_f4f74d71-e106-44ea-9e54-6b110c7638e9 .
+
+km-dev:TriplesMap_17f19e78-65cd-4723-b11c-0799169248d3 rr:predicateObjectMap km-dev:PredicateObjectMap_9b236cde-2c9f-40dd-a22a-597893ed1fad .
+
+km-dev:PredicateObjectMap_9b236cde-2c9f-40dd-a22a-597893ed1fad a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_9b236cde-2c9f-40dd-a22a-597893ed1fad .
+
+km-dev:TriplesMap_6aca9fa9-9bf9-4546-ac32-fe6816ee8045 a rr:TriplesMap .
+
+_:node1b7r57p0rx1 km-dev:hasTriplesMap km-dev:TriplesMap_6aca9fa9-9bf9-4546-ac32-fe6816ee8045 .
+
+km-dev:TriplesMap_6aca9fa9-9bf9-4546-ac32-fe6816ee8045 km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx4 rr:tableName "WAM_XMLExport_AAC_Geography.xml" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasLogicalTable _:node1b7r57p0rx4 .
+
+km-dev:TriplesMap_6aca9fa9-9bf9-4546-ac32-fe6816ee8045 rr:logicalTable _:node1b7r57p0rx4 ;
+	rr:subjectMap _:node1b7r57p0rx5 .
+
+_:node1b7r57p0rx1 km-dev:hasSubjectMap _:node1b7r57p0rx5 .
+
+_:node1b7r57p0rx5 km-dev:isPartOfMapping _:node1b7r57p0rx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E53_Place1" ;
+	rr:class crm:E53_Place ;
+	rr:template "{[\"Root\",\"ObjRecord\",\"ObjectRelatedGeography\",\"Geography\",\"ProductionURI\"]}/place" .
+
+km-dev:PredicateObjectMap_12dabcc1-8916-47ee-a5fb-10a5ce7ff6cf rr:predicate crm:P87_is_identified_by .
+
+km-dev:RefObjectMap_18713961-c2e4-43de-ab8a-a8d550f992d0 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_de03eab9-182a-417b-bfb9-10a15c5de969 ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasObjectMap km-dev:RefObjectMap_18713961-c2e4-43de-ab8a-a8d550f992d0 .
+
+km-dev:PredicateObjectMap_12dabcc1-8916-47ee-a5fb-10a5ce7ff6cf rr:objectMap km-dev:RefObjectMap_18713961-c2e4-43de-ab8a-a8d550f992d0 .
+
+km-dev:TriplesMap_6aca9fa9-9bf9-4546-ac32-fe6816ee8045 rr:predicateObjectMap km-dev:PredicateObjectMap_12dabcc1-8916-47ee-a5fb-10a5ce7ff6cf .
+
+km-dev:PredicateObjectMap_12dabcc1-8916-47ee-a5fb-10a5ce7ff6cf a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_12dabcc1-8916-47ee-a5fb-10a5ce7ff6cf .
+
+km-dev:PredicateObjectMap_adeaf2d2-224c-47ab-81e0-7c0b7c4e01b9 rr:predicate crm:P87_is_identified_by .
+
+km-dev:RefObjectMap_31895451-a713-443f-a366-55d9d18f7d6c a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_a22bcebb-0a4d-489c-ad11-dde8afcac354 ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasObjectMap km-dev:RefObjectMap_31895451-a713-443f-a366-55d9d18f7d6c .
+
+km-dev:PredicateObjectMap_adeaf2d2-224c-47ab-81e0-7c0b7c4e01b9 rr:objectMap km-dev:RefObjectMap_31895451-a713-443f-a366-55d9d18f7d6c .
+
+km-dev:TriplesMap_6aca9fa9-9bf9-4546-ac32-fe6816ee8045 rr:predicateObjectMap km-dev:PredicateObjectMap_adeaf2d2-224c-47ab-81e0-7c0b7c4e01b9 .
+
+km-dev:PredicateObjectMap_adeaf2d2-224c-47ab-81e0-7c0b7c4e01b9 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_adeaf2d2-224c-47ab-81e0-7c0b7c4e01b9 .
+
+km-dev:PredicateObjectMap_4c2d280f-70c6-4066-892b-6dcbb7ad94c9 rr:predicate rdfs:label .
+
+_:node1b7r57p0rx6 rr:column "[\"Root\",\"ObjRecord\",\"ObjectRelatedGeography\",\"Geography\",\"GeographyTerm\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasObjectMap _:node1b7r57p0rx6 .
+
+km-dev:PredicateObjectMap_4c2d280f-70c6-4066-892b-6dcbb7ad94c9 rr:objectMap _:node1b7r57p0rx6 .
+
+km-dev:TriplesMap_6aca9fa9-9bf9-4546-ac32-fe6816ee8045 rr:predicateObjectMap km-dev:PredicateObjectMap_4c2d280f-70c6-4066-892b-6dcbb7ad94c9 .
+
+km-dev:PredicateObjectMap_4c2d280f-70c6-4066-892b-6dcbb7ad94c9 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_4c2d280f-70c6-4066-892b-6dcbb7ad94c9 .
+
+km-dev:TriplesMap_54ec8559-950f-4415-80d9-6dc09a41e85a a rr:TriplesMap .
+
+_:node1b7r57p0rx1 km-dev:hasTriplesMap km-dev:TriplesMap_54ec8559-950f-4415-80d9-6dc09a41e85a .
+
+km-dev:TriplesMap_54ec8559-950f-4415-80d9-6dc09a41e85a km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx7 rr:tableName "WAM_XMLExport_AAC_Geography.xml" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasLogicalTable _:node1b7r57p0rx7 .
+
+km-dev:TriplesMap_54ec8559-950f-4415-80d9-6dc09a41e85a rr:logicalTable _:node1b7r57p0rx7 ;
+	rr:subjectMap _:node1b7r57p0rx8 .
+
+_:node1b7r57p0rx1 km-dev:hasSubjectMap _:node1b7r57p0rx8 .
+
+_:node1b7r57p0rx8 km-dev:isPartOfMapping _:node1b7r57p0rx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1" ;
+	rr:class crm:E22_Man-Made_Object ;
+	rr:template "object/{[\"Root\",\"ObjRecord\",\"ObjectID\"]}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_8418f584-5515-4c26-bb7a-35a08bdcca3f rr:predicate crm:P108i_was_produced_by .
+
+km-dev:RefObjectMap_793da8ca-4efc-464f-9d1e-0ff2a86bc5cd a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_17f19e78-65cd-4723-b11c-0799169248d3 ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasObjectMap km-dev:RefObjectMap_793da8ca-4efc-464f-9d1e-0ff2a86bc5cd .
+
+km-dev:PredicateObjectMap_8418f584-5515-4c26-bb7a-35a08bdcca3f rr:objectMap km-dev:RefObjectMap_793da8ca-4efc-464f-9d1e-0ff2a86bc5cd .
+
+km-dev:TriplesMap_54ec8559-950f-4415-80d9-6dc09a41e85a rr:predicateObjectMap km-dev:PredicateObjectMap_8418f584-5515-4c26-bb7a-35a08bdcca3f .
+
+km-dev:PredicateObjectMap_8418f584-5515-4c26-bb7a-35a08bdcca3f a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_8418f584-5515-4c26-bb7a-35a08bdcca3f .
+
+km-dev:TriplesMap_de03eab9-182a-417b-bfb9-10a15c5de969 a rr:TriplesMap .
+
+_:node1b7r57p0rx1 km-dev:hasTriplesMap km-dev:TriplesMap_de03eab9-182a-417b-bfb9-10a15c5de969 .
+
+km-dev:TriplesMap_de03eab9-182a-417b-bfb9-10a15c5de969 km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx9 rr:tableName "WAM_XMLExport_AAC_Geography.xml" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasLogicalTable _:node1b7r57p0rx9 .
+
+km-dev:TriplesMap_de03eab9-182a-417b-bfb9-10a15c5de969 rr:logicalTable _:node1b7r57p0rx9 ;
+	rr:subjectMap _:node1b7r57p0rx10 .
+
+_:node1b7r57p0rx1 km-dev:hasSubjectMap _:node1b7r57p0rx10 .
+
+_:node1b7r57p0rx10 km-dev:isPartOfMapping _:node1b7r57p0rx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates1" ;
+	rr:class crm:E47_Spatial_Coordinates ;
+	rr:template "{[\"Root\",\"ObjRecord\",\"ObjectRelatedGeography\",\"Geography\",\"PlaceURI\"]}/latitude" .
+
+km-dev:PredicateObjectMap_c235162e-416e-4770-8aad-e093d95daf76 rr:predicate rdf:value .
+
+_:node1b7r57p0rx11 rr:column "[\"Root\",\"ObjRecord\",\"ObjectRelatedGeography\",\"Geography\",\"LatitudeValue\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasObjectMap _:node1b7r57p0rx11 .
+
+km-dev:PredicateObjectMap_c235162e-416e-4770-8aad-e093d95daf76 rr:objectMap _:node1b7r57p0rx11 .
+
+km-dev:TriplesMap_de03eab9-182a-417b-bfb9-10a15c5de969 rr:predicateObjectMap km-dev:PredicateObjectMap_c235162e-416e-4770-8aad-e093d95daf76 .
+
+km-dev:PredicateObjectMap_c235162e-416e-4770-8aad-e093d95daf76 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c235162e-416e-4770-8aad-e093d95daf76 .
+
+km-dev:PredicateObjectMap_21d4e639-8a0d-4f5d-b6de-679bcbb8f1fd rr:predicate crm:P2_has_type .
+
+_:node1b7r57p0rx12 rr:constant <http://vocab.getty.edu/aat/300387565> ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasObjectMap _:node1b7r57p0rx12 .
+
+km-dev:PredicateObjectMap_21d4e639-8a0d-4f5d-b6de-679bcbb8f1fd rr:objectMap _:node1b7r57p0rx12 .
+
+km-dev:TriplesMap_de03eab9-182a-417b-bfb9-10a15c5de969 rr:predicateObjectMap km-dev:PredicateObjectMap_21d4e639-8a0d-4f5d-b6de-679bcbb8f1fd .
+
+km-dev:PredicateObjectMap_21d4e639-8a0d-4f5d-b6de-679bcbb8f1fd a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_21d4e639-8a0d-4f5d-b6de-679bcbb8f1fd .
+
+km-dev:TriplesMap_a22bcebb-0a4d-489c-ad11-dde8afcac354 a rr:TriplesMap .
+
+_:node1b7r57p0rx1 km-dev:hasTriplesMap km-dev:TriplesMap_a22bcebb-0a4d-489c-ad11-dde8afcac354 .
+
+km-dev:TriplesMap_a22bcebb-0a4d-489c-ad11-dde8afcac354 km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx13 rr:tableName "WAM_XMLExport_AAC_Geography.xml" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasLogicalTable _:node1b7r57p0rx13 .
+
+km-dev:TriplesMap_a22bcebb-0a4d-489c-ad11-dde8afcac354 rr:logicalTable _:node1b7r57p0rx13 ;
+	rr:subjectMap _:node1b7r57p0rx14 .
+
+_:node1b7r57p0rx1 km-dev:hasSubjectMap _:node1b7r57p0rx14 .
+
+_:node1b7r57p0rx14 km-dev:isPartOfMapping _:node1b7r57p0rx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates2" ;
+	rr:class crm:E47_Spatial_Coordinates ;
+	rr:template "{[\"Root\",\"ObjRecord\",\"ObjectRelatedGeography\",\"Geography\",\"PlaceURI\"]}/longitude" .
+
+km-dev:PredicateObjectMap_5c1a5cb7-abba-4e89-b002-87f6727f8d89 rr:predicate rdf:value .
+
+_:node1b7r57p0rx15 rr:column "[\"Root\",\"ObjRecord\",\"ObjectRelatedGeography\",\"Geography\",\"LongitudeValue\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasObjectMap _:node1b7r57p0rx15 .
+
+km-dev:PredicateObjectMap_5c1a5cb7-abba-4e89-b002-87f6727f8d89 rr:objectMap _:node1b7r57p0rx15 .
+
+km-dev:TriplesMap_a22bcebb-0a4d-489c-ad11-dde8afcac354 rr:predicateObjectMap km-dev:PredicateObjectMap_5c1a5cb7-abba-4e89-b002-87f6727f8d89 .
+
+km-dev:PredicateObjectMap_5c1a5cb7-abba-4e89-b002-87f6727f8d89 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_5c1a5cb7-abba-4e89-b002-87f6727f8d89 .
+
+km-dev:PredicateObjectMap_0ca9e972-49da-46f5-b9a2-300a11f13b50 rr:predicate crm:P2_has_type .
+
+_:node1b7r57p0rx16 rr:constant <http://vocab.getty.edu/aat/300387567> ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasObjectMap _:node1b7r57p0rx16 .
+
+km-dev:PredicateObjectMap_0ca9e972-49da-46f5-b9a2-300a11f13b50 rr:objectMap _:node1b7r57p0rx16 .
+
+km-dev:TriplesMap_a22bcebb-0a4d-489c-ad11-dde8afcac354 rr:predicateObjectMap km-dev:PredicateObjectMap_0ca9e972-49da-46f5-b9a2-300a11f13b50 .
+
+km-dev:PredicateObjectMap_0ca9e972-49da-46f5-b9a2-300a11f13b50 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1b7r57p0rx1 .
+
+_:node1b7r57p0rx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_0ca9e972-49da-46f5-b9a2-300a11f13b50 .
