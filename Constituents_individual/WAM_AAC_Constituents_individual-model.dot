@@ -1,0 +1,49 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+label="WAM_XMLExport_AAC_Constituents_V3.xml"
+subgraph cluster {
+label="model"
+n2[style="filled",color="white",fillcolor="lightgray",label="E39_Actor1"];
+n3[style="filled",color="white",fillcolor="lightgray",label="E33_Linguistic_Object1"];
+n4[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
+n5[style="filled",color="white",fillcolor="lightgray",label="E82_Actor_Appellation1"];
+n6[style="filled",color="white",fillcolor="lightgray",label="Concept1"];
+n7[style="filled",color="white",fillcolor="lightgray",label="E55_Type2"];
+n8[shape="plaintext",style="filled",fillcolor="gold",label="NameURI"];
+n9[shape="plaintext",style="filled",fillcolor="gold",label="Biography"];
+n10[shape="plaintext",style="filled",fillcolor="gold",label="Gender"];
+n11[shape="plaintext",style="filled",fillcolor="gold",label="NameLabel"];
+n12[shape="plaintext",style="filled",fillcolor="gold",label="UlanURI"];
+n13[shape="plaintext",style="filled",fillcolor="gold",label="GenderURI"];
+n14[shape="plaintext",style="filled",fillcolor="gold",label="BiographyURI"];
+n15[shape="plaintext",style="filled",fillcolor="gold",label="GenderTypeURI"];
+n16[shape="plaintext",style="filled",fillcolor="gold",label="DisplayName"];
+n17[shape="plaintext",style="filled",fillcolor="gold",label="ConstituentURI"];
+n18[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
+n19[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
+n20[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300080102"];
+n21[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/ulan"];
+n22[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300055147"];
+}
+n2 -> n3[color="brown",fontcolor="black",label="P129i_is_subject_of"]
+n2 -> n4[color="brown",fontcolor="black",label="P2_has_type"]
+n2 -> n5[color="brown",fontcolor="black",label="P131_is_identified_by"]
+n2 -> n6[color="brown",fontcolor="black",label="exactMatch"]
+n4 -> n7[color="brown",fontcolor="black",label="P2_has_type"]
+n5 -> n8[color="brown",fontcolor="black",label="classLink"]
+n3 -> n9[color="brown",fontcolor="black",label="value"]
+n4 -> n10[color="brown",fontcolor="black",label="label"]
+n2 -> n11[color="brown",fontcolor="black",label="label"]
+n6 -> n12[color="brown",fontcolor="black",label="classLink"]
+n4 -> n13[color="brown",fontcolor="black",label="classLink"]
+n3 -> n14[color="brown",fontcolor="black",label="classLink"]
+n7 -> n15[color="brown",fontcolor="black",label="classLink"]
+n5 -> n16[color="brown",fontcolor="black",label="value"]
+n2 -> n17[color="brown",fontcolor="black",label="classLink"]
+n5 -> n18[color="brown",fontcolor="black",label="P2_has_type"]
+n3 -> n19[color="brown",fontcolor="black",label="P2_has_type"]
+n3 -> n20[color="brown",fontcolor="black",label="P2_has_type"]
+n6 -> n21[color="brown",fontcolor="black",label="inScheme"]
+n7 -> n22[color="brown",fontcolor="black",label="broadMatch"]
+}
