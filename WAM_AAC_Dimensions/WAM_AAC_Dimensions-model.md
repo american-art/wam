@@ -20,7 +20,7 @@ return str(int(float(getValue("Dimension"))*10)/10.0)
 #### _PartURI_
 From column: _Root / ObjRecord / Dimensions / DimensionType / DimensionID_
 ``` python
-return getValue("ObjectURI")+"/"+getValue("Element")
+return getValue("ObjectURI")+"/"+getValue("Element").lower()
 ```
 
 #### _DimensionURI_
