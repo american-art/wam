@@ -59,7 +59,7 @@ return getValue("GenderURI")+"/gender_type"
 From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / Role_
 ``` python
 if getValue("Biography"):
-    return getValue("Biography")
+    return getValue("ConstituentURI")+"/biogaphy"
 else:
     return ""
 ```
