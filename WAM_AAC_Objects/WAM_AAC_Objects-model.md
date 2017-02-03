@@ -33,6 +33,11 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
+#### Literal Node: `http://vocab.getty.edu/aat/300179869`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ObjectURI_
@@ -145,7 +150,7 @@ return getValue("ObjectURI")+"/current_owner"
 |  --- | -------- | ---|
 | `crm:E12_Production1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
 | `crm:E17_Type_Assignment1` | `crm:P42_assigned` | `crm:E55_Type1`|
-| `crm:E17_Type_Assignment1` | `crm:P21_had_general_purpose` | `xsd:ttp://vocab.getty.edu/aat/300179869`|
+| `crm:E17_Type_Assignment1` | `crm:P21_had_general_purpose` | `xsd:http://vocab.getty.edu/aat/300179869`|
 | `crm:E22_Man-Made_Object1` | `crm:P108i_was_produced_by` | `crm:E12_Production1`|
 | `crm:E22_Man-Made_Object1` | `crm:P41i_was_classified_by` | `crm:E17_Type_Assignment1`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object1`|
