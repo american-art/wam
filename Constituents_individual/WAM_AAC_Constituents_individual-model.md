@@ -59,7 +59,7 @@ return getValue("GenderURI")+"/gender_type"
 From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / Role_
 ``` python
 if getValue("Biography"):
-    return getValue("ConstituentURI")+"/biogaphy"
+    return getValue("Biography")
 else:
     return ""
 ```
@@ -67,8 +67,8 @@ else:
 #### _UlanURI_
 From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / CreatorULANID_
 ``` python
-if getValue("Creator ULAN"):
-    return "http://vocab.getty.edu/ulan/"+getValue("Creator ULAN")
+if getValue("CreatorULANID"):
+    return "http://vocab.getty.edu/ulan/"+getValue("CreatorULANID")
 else:
     return ""
 ```
