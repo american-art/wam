@@ -40,5 +40,5 @@ return getValue("ObjectURI")+"/production"
 ## Links
 | From | Property | To |
 |  --- | -------- | ---|
+| `crm:E12_Production1` | `crm:P14_carried_out_by` | `crm:E39_Actor1`|
 | `crm:E22_Man-Made_Object1` | `crm:P108i_was_produced_by` | `crm:E12_Production1`|
-| `crm:E22_Man-Made_Object1` | `crm:P62_depicts` | `crm:E39_Actor1`|
