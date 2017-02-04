@@ -49,7 +49,12 @@ return "object/"+getValue("ObjectID")
 #### _ClassificationURI_
 From column: _Root / ObjRecord / Classification_
 ``` python
-return getValue("ObjectURI")+"/classification_type"
+classification_term = getValue("Classification")+"-"+getValue("SubClassification")
+uri = AATTerm.get_aat_uri('wam', classification_term)
+if 'vocab.getty.edu' in uri:
+    return uri
+else:
+    return UM.uri_from_fields("thesauri/classification/",getValue("Classification"))
 ```
 
 #### _ClassificationEventURI_
