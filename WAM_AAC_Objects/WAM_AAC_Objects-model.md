@@ -115,6 +115,12 @@ From column: _Root / ObjRecord / Inscription_
 return getValue("ObjectURI")+"/current_owner"
 ```
 
+#### _ObjectIdURI_
+From column: _Root / ObjRecord / ObjUnderJurisOf_
+``` python
+return getValue("ObjectURI")+"/object_id"
+```
+
 
 ## Selections
 
@@ -136,6 +142,8 @@ return getValue("ObjectURI")+"/current_owner"
 | _MediumTermURI_ | `uri` | `crm:E57_Material1`|
 | _MediumURI_ | `uri` | `crm:E33_Linguistic_Object2`|
 | _ObjUnderJurisOf_ | `rdfs:label` | `crm:E40_Legal_Body1`|
+| _ObjectID_ | `rdf:value` | `crm:E42_Identifier1`|
+| _ObjectIdURI_ | `uri` | `crm:E42_Identifier1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _ProductionTimespanURI_ | `uri` | `crm:E52_Time-Span1`|
 | _ProductionURI_ | `uri` | `crm:E12_Production1`|
@@ -157,6 +165,7 @@ return getValue("ObjectURI")+"/current_owner"
 | `crm:E22_Man-Made_Object1` | `crm:P129i_is_subject_of` | `crm:E33_Linguistic_Object2`|
 | `crm:E22_Man-Made_Object1` | `crm:P129i_is_subject_of` | `crm:E33_Linguistic_Object3`|
 | `crm:E22_Man-Made_Object1` | `crm:P52_has_current_owner` | `crm:E40_Legal_Body1`|
+| `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E22_Man-Made_Object1` | `crm:P45_consists_of` | `crm:E57_Material1`|
 | `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document1`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type1`|
@@ -165,4 +174,5 @@ return getValue("ObjectURI")+"/current_owner"
 | `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300264237`|
 | `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300080091`|
 | `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
+| `crm:E42_Identifier1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
 | `crm:E57_Material1` | `skos:broadMatch` | `owl:Thing1`|
