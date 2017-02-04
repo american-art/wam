@@ -26,7 +26,10 @@ return getValue("Title")
 #### _AlternateTitleType_
 From column: _Root / ObjRecord / Titles / Title / TitleID_
 ``` python
-return getValue("TitleURI")+"/title_type"
+if getValue("TitleType"):
+    return getValue("TitleURI")+"/title_type"
+else:
+    return ""
 ```
 
 
