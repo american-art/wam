@@ -1,0 +1,23 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+label="WAM_XMLExport_AAC_Constituents_V3.xml"
+subgraph cluster {
+label="model"
+n2[style="filled",color="white",fillcolor="lightgray",label="E17_Type_Assignment1"];
+n3[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
+n4[style="filled",color="white",fillcolor="lightgray",label="E22_Man-Made_Object1"];
+n5[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
+n6[shape="plaintext",style="filled",fillcolor="gold",label="CultureNameURI"];
+n7[shape="plaintext",style="filled",fillcolor="gold",label="TypeAssignmentURI"];
+n8[shape="plaintext",style="filled",fillcolor="gold",label="DisplayName"];
+n9[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300015646"];
+}
+n2 -> n3[color="brown",fontcolor="black",label="P41i_was_classified_by"]
+n4 -> n2[color="brown",fontcolor="black",label="P41i_was_classified_by"]
+n4 -> n5[color="brown",fontcolor="black",label="classLink"]
+n3 -> n6[color="brown",fontcolor="black",label="classLink"]
+n2 -> n7[color="brown",fontcolor="black",label="classLink"]
+n3 -> n8[color="brown",fontcolor="black",label="label"]
+n2 -> n9[color="brown",fontcolor="black",label="P21_had_general_purpose"]
+}
