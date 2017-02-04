@@ -1,0 +1,21 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+label="WAM_XMLExport_AAC_Constituents_V3.xml"
+subgraph cluster {
+label="model"
+n2[style="filled",color="white",fillcolor="lightgray",label="E39_Actor1"];
+n3[style="filled",color="white",fillcolor="lightgray",label="E82_Actor_Appellation1"];
+n4[shape="plaintext",style="filled",fillcolor="gold",label="NameURI"];
+n5[shape="plaintext",style="filled",fillcolor="gold",label="NameLabel"];
+n6[shape="plaintext",style="filled",fillcolor="gold",label="DisplayName"];
+n7[shape="plaintext",style="filled",fillcolor="gold",label="ConstituentURI"];
+n8[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
+}
+n2 -> n3[color="brown",fontcolor="black",label="P131_is_identified_by"]
+n3 -> n4[color="brown",fontcolor="black",label="classLink"]
+n2 -> n5[color="brown",fontcolor="black",label="label"]
+n3 -> n6[color="brown",fontcolor="black",label="value"]
+n2 -> n7[color="brown",fontcolor="black",label="classLink"]
+n3 -> n8[color="brown",fontcolor="black",label="P2_has_type"]
+}
