@@ -14,7 +14,7 @@ else:
     ""
 ```
 
-#### _DeathURI_
+#### _NotInUse1_
 From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentType_
 ``` python
 if getValue("ThesGeographyTerm"):
@@ -23,8 +23,26 @@ else:
     return ""
 ```
 
-#### _DeathLocationURI_
+#### _NotInUse_
 From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentType_
+``` python
+if getValue("ThesGeographyTerm"):
+    return getValue("DeathURI")+"/location"
+else:
+    return ""
+```
+
+#### _DeathURI_
+From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentGeography / ConstituentGeography / ThesGeographyTerm_
+``` python
+if getValue("ThesGeographyTerm"):
+    return getValue("ConstituentURI")+"/death"
+else:
+    return ""
+```
+
+#### _DeathLocationURI_
+From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentGeography / ConstituentGeography / ThesGeographyTerm_
 ``` python
 if getValue("ThesGeographyTerm"):
     return getValue("DeathURI")+"/location"
