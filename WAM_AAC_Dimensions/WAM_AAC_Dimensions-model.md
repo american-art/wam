@@ -26,13 +26,19 @@ return getValue("ObjectURI")+"/"+getValue("Element").lower()
 #### _DimensionURI_
 From column: _Root / ObjRecord / Dimensions / DimensionType / DimensionPart / Dimension_
 ``` python
-return getValue("PartURI")+"/dimension"
+return getValue("PartURI")+"/"+getValue("DimensionType").lower()+"/dimension"
 ```
 
 #### _TypeURI_
 From column: _Root / ObjRecord / Dimensions / DimensionType / DimensionPart / DimensionType_
 ``` python
-return getValue("DimensionURI")+"/"+getValue("DimensionType").lower()
+return UM.uri_from_fields("thesauri/dimension_type/",getValue("DimensionType"))
+```
+
+#### _NotInUse1_
+From column: _Root / ObjRecord / Dimensions / DimensionType / PartURI_
+``` python
+return getValue("PartURI")+"/dimension"
 ```
 
 
