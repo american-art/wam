@@ -4,20 +4,16 @@ remincross="true"
 label="WAM_XMLExport_AAC_Constituents_V3.xml"
 subgraph cluster {
 label="model"
-n2[style="filled",color="white",fillcolor="lightgray",label="E17_Type_Assignment1"];
-n3[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
-n4[style="filled",color="white",fillcolor="lightgray",label="E22_Man-Made_Object1"];
-n5[shape="plaintext",style="filled",fillcolor="gold",label="CultureNameURI"];
-n6[shape="plaintext",style="filled",fillcolor="gold",label="CultureURI"];
-n7[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
-n8[shape="plaintext",style="filled",fillcolor="gold",label="DisplayName"];
-n9[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300015646"];
+n2[style="filled",color="white",fillcolor="lightgray",label="E39_Actor1"];
+n3[style="filled",color="white",fillcolor="lightgray",label="E82_Actor_Appellation1"];
+n4[shape="plaintext",style="filled",fillcolor="gold",label="ConstituentURI"];
+n5[shape="plaintext",style="filled",fillcolor="gold",label="NameLabel"];
+n6[shape="plaintext",style="filled",fillcolor="gold",label="DisplayName"];
+n7[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
 }
-n2 -> n3[color="brown",fontcolor="black",label="P42_assigned"]
-n4 -> n2[color="brown",fontcolor="black",label="P41i_was_classified_by"]
-n3 -> n5[color="brown",fontcolor="black",label="classLink"]
-n2 -> n6[color="brown",fontcolor="black",label="classLink"]
-n4 -> n7[color="brown",fontcolor="black",label="classLink"]
-n3 -> n8[color="brown",fontcolor="black",label="label"]
-n2 -> n9[color="brown",fontcolor="black",label="P21_had_general_purpose"]
+n2 -> n3[color="brown",fontcolor="black",label="P131_is_identified_by"]
+n2 -> n4[color="brown",fontcolor="black",label="classLink"]
+n2 -> n5[color="brown",fontcolor="black",label="label"]
+n3 -> n6[color="brown",fontcolor="black",label="value"]
+n3 -> n7[color="brown",fontcolor="black",label="P2_has_type"]
 }
