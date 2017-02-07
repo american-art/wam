@@ -21,7 +21,7 @@ From column: _Root / ObjRecord / ObjectID_
 return "object/"+getValue("ObjectID")
 ```
 
-#### _ProductionURI_
+#### _NotInUse_
 From column: _Root / ObjRecord / ObjectRelatedGeography / Geography / GeoType_
 ``` python
 return getValue("ObjectURI")+"/production"
@@ -83,6 +83,12 @@ if longDir == "" or latDir == "" or long == "" or lat == "":
     return ""
 else:
     return "\"" + format_latLong(long) + " " +longDir + "\""
+```
+
+#### _ProductionURI_
+From column: _Root / ObjRecord / ObjectURI_
+``` python
+return getValue("ObjectURI")+"/production"
 ```
 
 
