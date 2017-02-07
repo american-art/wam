@@ -14,7 +14,7 @@ else:
     return ""
 ```
 
-#### _BirthURI_
+#### _NotInUse1_
 From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentType_
 ``` python
 if getValue("ThesGeographyTerm"):
@@ -23,8 +23,26 @@ else:
     return ""
 ```
 
-#### _BirthLocationURI_
+#### _NotInUse_
 From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentType_
+``` python
+if getValue("ThesGeographyTerm"):
+    return getValue("BirthURI")+"/location"
+else:
+    return ""
+```
+
+#### _BirthURI_
+From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentGeography / ConstituentGeography / ThesGeographyTerm_
+``` python
+if getValue("ThesGeographyTerm"):
+    return getValue("ConstituentURI")+"/birth"
+else:
+    return ""
+```
+
+#### _BirthLocationURI_
+From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentGeography / ConstituentGeography / ThesGeographyTerm_
 ``` python
 if getValue("ThesGeographyTerm"):
     return getValue("BirthURI")+"/location"
