@@ -9,14 +9,14 @@ n3[style="filled",color="white",fillcolor="lightgray",label="E53_Place1"];
 n4[style="filled",color="white",fillcolor="lightgray",label="E22_Man-Made_Object1"];
 n5[style="filled",color="white",fillcolor="lightgray",label="E47_Spatial_Coordinates1"];
 n6[style="filled",color="white",fillcolor="lightgray",label="E47_Spatial_Coordinates2"];
-n7[shape="plaintext",style="filled",fillcolor="gold",label="PlaceURI"];
-n8[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
-n9[shape="plaintext",style="filled",fillcolor="gold",label="LatitudeValue"];
-n10[shape="plaintext",style="filled",fillcolor="gold",label="LongitudeURI"];
-n11[shape="plaintext",style="filled",fillcolor="gold",label="GeographyTerm"];
-n12[shape="plaintext",style="filled",fillcolor="gold",label="LongitudeValue"];
-n13[shape="plaintext",style="filled",fillcolor="gold",label="LatitudeURI"];
-n14[shape="plaintext",style="filled",fillcolor="gold",label="ProductionURI"];
+n7[shape="plaintext",style="filled",fillcolor="gold",label="ProductionURI"];
+n8[shape="plaintext",style="filled",fillcolor="gold",label="LatitudeURI"];
+n9[shape="plaintext",style="filled",fillcolor="gold",label="GeographyTerm"];
+n10[shape="plaintext",style="filled",fillcolor="gold",label="PlaceURI"];
+n11[shape="plaintext",style="filled",fillcolor="gold",label="LongitudeValue"];
+n12[shape="plaintext",style="filled",fillcolor="gold",label="LongitudeURI"];
+n13[shape="plaintext",style="filled",fillcolor="gold",label="LatitudeValue"];
+n14[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
 n15[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300387567"];
 n16[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300387565"];
 }
@@ -24,14 +24,14 @@ n2 -> n3[color="brown",fontcolor="black",label="P7_took_place_at"]
 n4 -> n2[color="brown",fontcolor="black",label="P108i_was_produced_by"]
 n3 -> n5[color="brown",fontcolor="black",label="P87_is_identified_by"]
 n3 -> n6[color="brown",fontcolor="black",label="P87_is_identified_by"]
-n3 -> n7[color="brown",fontcolor="black",label="classLink"]
-n4 -> n8[color="brown",fontcolor="black",label="classLink"]
-n5 -> n9[color="brown",fontcolor="black",label="value"]
-n6 -> n10[color="brown",fontcolor="black",label="classLink"]
-n3 -> n11[color="brown",fontcolor="black",label="label"]
-n6 -> n12[color="brown",fontcolor="black",label="value"]
-n5 -> n13[color="brown",fontcolor="black",label="classLink"]
-n2 -> n14[color="brown",fontcolor="black",label="classLink"]
+n2 -> n7[color="brown",fontcolor="black",label="classLink"]
+n5 -> n8[color="brown",fontcolor="black",label="classLink"]
+n3 -> n9[color="brown",fontcolor="black",label="label"]
+n3 -> n10[color="brown",fontcolor="black",label="classLink"]
+n6 -> n11[color="brown",fontcolor="black",label="value"]
+n6 -> n12[color="brown",fontcolor="black",label="classLink"]
+n5 -> n13[color="brown",fontcolor="black",label="value"]
+n4 -> n14[color="brown",fontcolor="black",label="classLink"]
 n6 -> n15[color="brown",fontcolor="black",label="P2_has_type"]
 n5 -> n16[color="brown",fontcolor="black",label="P2_has_type"]
 }
