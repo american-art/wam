@@ -31,6 +31,7 @@ return getValue("ObjectURI")+"/production"
 From column: _Root / ObjRecord / ObjectRelatedGeography / Geography / GeographyID_
 ``` python
 return getValue("ProductionURI")+"/place"
+#return "object/"+getValue("ObjectID")
 ```
 
 #### _LatitudeURI_
