@@ -4,24 +4,14 @@
     "description": null,
     "sourceColumns": [
         {
-            "id": "HN17690",
-            "hNodeId": "HN17690",
-            "columnName": "PlaceURI"
+            "id": "HN8913",
+            "hNodeId": "HN8913",
+            "columnName": "ProductionURI"
         },
         {
-            "id": "HN16012",
-            "hNodeId": "HN16012",
-            "columnName": "ObjectURI"
-        },
-        {
-            "id": "HN19438",
-            "hNodeId": "HN19438",
-            "columnName": "LatitudeValue"
-        },
-        {
-            "id": "HN20312",
-            "hNodeId": "HN20312",
-            "columnName": "LongitudeURI"
+            "id": "HN7503",
+            "hNodeId": "HN7503",
+            "columnName": "LatitudeURI"
         },
         {
             "id": "HN37",
@@ -29,53 +19,63 @@
             "columnName": "GeographyTerm"
         },
         {
-            "id": "HN21186",
-            "hNodeId": "HN21186",
+            "id": "HN7151",
+            "hNodeId": "HN7151",
+            "columnName": "PlaceURI"
+        },
+        {
+            "id": "HN8559",
+            "hNodeId": "HN8559",
             "columnName": "LongitudeValue"
         },
         {
-            "id": "HN18564",
-            "hNodeId": "HN18564",
-            "columnName": "LatitudeURI"
+            "id": "HN8207",
+            "hNodeId": "HN8207",
+            "columnName": "LongitudeURI"
         },
         {
-            "id": "HN22062",
-            "hNodeId": "HN22062",
-            "columnName": "ProductionURI"
+            "id": "HN7855",
+            "hNodeId": "HN7855",
+            "columnName": "LatitudeValue"
+        },
+        {
+            "id": "HN6470",
+            "hNodeId": "HN6470",
+            "columnName": "ObjectURI"
         }
     ],
     "mappingToSourceColumns": [
         {
-            "id": "HN17690",
-            "sourceColumnId": "HN17690"
+            "id": "HN8913",
+            "sourceColumnId": "HN8913"
         },
         {
-            "id": "HN16012",
-            "sourceColumnId": "HN16012"
-        },
-        {
-            "id": "HN19438",
-            "sourceColumnId": "HN19438"
-        },
-        {
-            "id": "HN20312",
-            "sourceColumnId": "HN20312"
+            "id": "HN7503",
+            "sourceColumnId": "HN7503"
         },
         {
             "id": "HN37",
             "sourceColumnId": "HN37"
         },
         {
-            "id": "HN21186",
-            "sourceColumnId": "HN21186"
+            "id": "HN8559",
+            "sourceColumnId": "HN8559"
         },
         {
-            "id": "HN18564",
-            "sourceColumnId": "HN18564"
+            "id": "HN7151",
+            "sourceColumnId": "HN7151"
         },
         {
-            "id": "HN22062",
-            "sourceColumnId": "HN22062"
+            "id": "HN8207",
+            "sourceColumnId": "HN8207"
+        },
+        {
+            "id": "HN7855",
+            "sourceColumnId": "HN7855"
+        },
+        {
+            "id": "HN6470",
+            "sourceColumnId": "HN6470"
         }
     ],
     "graph": {
@@ -126,21 +126,21 @@
                 "modelIds": null
             },
             {
-                "id": "HN17690",
+                "id": "HN8913",
                 "label": {
-                    "uri": "HN17690",
+                    "uri": "HN8913",
                     "rdfsLabel": null
                 },
                 "type": "ColumnNode",
-                "hNodeId": "HN17690",
-                "columnName": "PlaceURI",
+                "hNodeId": "HN8913",
+                "columnName": "ProductionURI",
                 "rdfLiteralType": null,
                 "language": "",
                 "userSemanticTypes": [
                     {
-                        "hNodeId": "HN17690",
+                        "hNodeId": "HN8913",
                         "domain": {
-                            "uri": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
+                            "uri": "http://www.cidoc-crm.org/cidoc-crm/E12_Production",
                             "rdfsLabel": null
                         },
                         "type": {
@@ -155,77 +155,19 @@
                 "modelIds": null
             },
             {
-                "id": "HN16012",
+                "id": "HN7503",
                 "label": {
-                    "uri": "HN16012",
+                    "uri": "HN7503",
                     "rdfsLabel": null
                 },
                 "type": "ColumnNode",
-                "hNodeId": "HN16012",
-                "columnName": "ObjectURI",
+                "hNodeId": "HN7503",
+                "columnName": "LatitudeURI",
                 "rdfLiteralType": null,
                 "language": "",
                 "userSemanticTypes": [
                     {
-                        "hNodeId": "HN16012",
-                        "domain": {
-                            "uri": "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object",
-                            "rdfsLabel": null
-                        },
-                        "type": {
-                            "uri": "http://isi.edu/integration/karma/dev#classLink",
-                            "rdfsLabel": null
-                        },
-                        "origin": "User",
-                        "confidenceScore": 1.0
-                    }
-                ],
-                "learnedSemanticTypes": null,
-                "modelIds": null
-            },
-            {
-                "id": "HN19438",
-                "label": {
-                    "uri": "HN19438",
-                    "rdfsLabel": null
-                },
-                "type": "ColumnNode",
-                "hNodeId": "HN19438",
-                "columnName": "LatitudeValue",
-                "rdfLiteralType": null,
-                "language": "",
-                "userSemanticTypes": [
-                    {
-                        "hNodeId": "HN19438",
-                        "domain": {
-                            "uri": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
-                            "rdfsLabel": null
-                        },
-                        "type": {
-                            "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
-                            "rdfsLabel": null
-                        },
-                        "origin": "User",
-                        "confidenceScore": 1.0
-                    }
-                ],
-                "learnedSemanticTypes": null,
-                "modelIds": null
-            },
-            {
-                "id": "HN20312",
-                "label": {
-                    "uri": "HN20312",
-                    "rdfsLabel": null
-                },
-                "type": "ColumnNode",
-                "hNodeId": "HN20312",
-                "columnName": "LongitudeURI",
-                "rdfLiteralType": null,
-                "language": "",
-                "userSemanticTypes": [
-                    {
-                        "hNodeId": "HN20312",
+                        "hNodeId": "HN7503",
                         "domain": {
                             "uri": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
                             "rdfsLabel": null
@@ -271,19 +213,48 @@
                 "modelIds": null
             },
             {
-                "id": "HN21186",
+                "id": "HN7151",
                 "label": {
-                    "uri": "HN21186",
+                    "uri": "HN7151",
                     "rdfsLabel": null
                 },
                 "type": "ColumnNode",
-                "hNodeId": "HN21186",
+                "hNodeId": "HN7151",
+                "columnName": "PlaceURI",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN7151",
+                        "domain": {
+                            "uri": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
+                            "rdfsLabel": null
+                        },
+                        "type": {
+                            "uri": "http://isi.edu/integration/karma/dev#classLink",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN8559",
+                "label": {
+                    "uri": "HN8559",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN8559",
                 "columnName": "LongitudeValue",
                 "rdfLiteralType": null,
                 "language": "",
                 "userSemanticTypes": [
                     {
-                        "hNodeId": "HN21186",
+                        "hNodeId": "HN8559",
                         "domain": {
                             "uri": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
                             "rdfsLabel": null
@@ -300,19 +271,19 @@
                 "modelIds": null
             },
             {
-                "id": "HN18564",
+                "id": "HN8207",
                 "label": {
-                    "uri": "HN18564",
+                    "uri": "HN8207",
                     "rdfsLabel": null
                 },
                 "type": "ColumnNode",
-                "hNodeId": "HN18564",
-                "columnName": "LatitudeURI",
+                "hNodeId": "HN8207",
+                "columnName": "LongitudeURI",
                 "rdfLiteralType": null,
                 "language": "",
                 "userSemanticTypes": [
                     {
-                        "hNodeId": "HN18564",
+                        "hNodeId": "HN8207",
                         "domain": {
                             "uri": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
                             "rdfsLabel": null
@@ -329,21 +300,50 @@
                 "modelIds": null
             },
             {
-                "id": "HN22062",
+                "id": "HN7855",
                 "label": {
-                    "uri": "HN22062",
+                    "uri": "HN7855",
                     "rdfsLabel": null
                 },
                 "type": "ColumnNode",
-                "hNodeId": "HN22062",
-                "columnName": "ProductionURI",
+                "hNodeId": "HN7855",
+                "columnName": "LatitudeValue",
                 "rdfLiteralType": null,
                 "language": "",
                 "userSemanticTypes": [
                     {
-                        "hNodeId": "HN22062",
+                        "hNodeId": "HN7855",
                         "domain": {
-                            "uri": "http://www.cidoc-crm.org/cidoc-crm/E12_Production",
+                            "uri": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates",
+                            "rdfsLabel": null
+                        },
+                        "type": {
+                            "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN6470",
+                "label": {
+                    "uri": "HN6470",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN6470",
+                "columnName": "ObjectURI",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN6470",
+                        "domain": {
+                            "uri": "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object",
                             "rdfsLabel": null
                         },
                         "type": {
@@ -444,7 +444,7 @@
                 "modelIds": null
             },
             {
-                "id": "http://www.cidoc-crm.org/cidoc-crm/E53_Place1---http://isi.edu/integration/karma/dev#classLink---HN17690",
+                "id": "http://www.cidoc-crm.org/cidoc-crm/E12_Production1---http://isi.edu/integration/karma/dev#classLink---HN8913",
                 "weight": 0.01,
                 "type": "ClassInstanceLink",
                 "label": {
@@ -456,31 +456,7 @@
                 "modelIds": null
             },
             {
-                "id": "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1---http://isi.edu/integration/karma/dev#classLink---HN16012",
-                "weight": 0.01,
-                "type": "ClassInstanceLink",
-                "label": {
-                    "uri": "http://isi.edu/integration/karma/dev#classLink",
-                    "rdfsLabel": null
-                },
-                "status": "ForcedByUser",
-                "keyInfo": "UriOfInstance",
-                "modelIds": null
-            },
-            {
-                "id": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates1---http://www.w3.org/1999/02/22-rdf-syntax-ns#value---HN19438",
-                "weight": 0.01,
-                "type": "DataPropertyLink",
-                "label": {
-                    "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
-                    "rdfsLabel": null
-                },
-                "status": "ForcedByUser",
-                "keyInfo": "None",
-                "modelIds": null
-            },
-            {
-                "id": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates2---http://isi.edu/integration/karma/dev#classLink---HN20312",
+                "id": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates1---http://isi.edu/integration/karma/dev#classLink---HN7503",
                 "weight": 0.01,
                 "type": "ClassInstanceLink",
                 "label": {
@@ -504,19 +480,7 @@
                 "modelIds": null
             },
             {
-                "id": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates2---http://www.w3.org/1999/02/22-rdf-syntax-ns#value---HN21186",
-                "weight": 0.01,
-                "type": "DataPropertyLink",
-                "label": {
-                    "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
-                    "rdfsLabel": null
-                },
-                "status": "ForcedByUser",
-                "keyInfo": "None",
-                "modelIds": null
-            },
-            {
-                "id": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates1---http://isi.edu/integration/karma/dev#classLink---HN18564",
+                "id": "http://www.cidoc-crm.org/cidoc-crm/E53_Place1---http://isi.edu/integration/karma/dev#classLink---HN7151",
                 "weight": 0.01,
                 "type": "ClassInstanceLink",
                 "label": {
@@ -528,7 +492,43 @@
                 "modelIds": null
             },
             {
-                "id": "http://www.cidoc-crm.org/cidoc-crm/E12_Production1---http://isi.edu/integration/karma/dev#classLink---HN22062",
+                "id": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates2---http://www.w3.org/1999/02/22-rdf-syntax-ns#value---HN8559",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates2---http://isi.edu/integration/karma/dev#classLink---HN8207",
+                "weight": 0.01,
+                "type": "ClassInstanceLink",
+                "label": {
+                    "uri": "http://isi.edu/integration/karma/dev#classLink",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "UriOfInstance",
+                "modelIds": null
+            },
+            {
+                "id": "http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates1---http://www.w3.org/1999/02/22-rdf-syntax-ns#value---HN7855",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1---http://isi.edu/integration/karma/dev#classLink---HN6470",
                 "weight": 0.01,
                 "type": "ClassInstanceLink",
                 "label": {
