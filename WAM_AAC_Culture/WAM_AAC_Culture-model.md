@@ -22,6 +22,12 @@ From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / Displ
 return getValue("DisplayName")
 ```
 
+#### _NameURI_
+From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / CreatorULANID_
+``` python
+return getValue("ConstituentURI")+"/name"
+```
+
 
 ## Selections
 #### _DEFAULT_TEST_
@@ -38,6 +44,7 @@ return getValue("ConstituentType")!="Culture"
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
 | _DisplayName_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
 | _NameLabel_ | `rdfs:label` | `crm:E39_Actor1`|
+| _NameURI_ | `uri` | `crm:E82_Actor_Appellation1`|
 
 
 ## Links
