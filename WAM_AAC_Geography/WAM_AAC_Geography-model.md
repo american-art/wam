@@ -30,7 +30,7 @@ return getValue("ObjectURI")+"/production"
 #### _PlaceURI_
 From column: _Root / ObjRecord / ObjectRelatedGeography / Geography / GeographyID_
 ``` python
-return "object/"+getValue("ObjectID")+"/production/place"
+return UM.uri_from_fields("thesauri/place/",getValue("GeographyTerm"))
 ```
 
 #### _LatitudeURI_
