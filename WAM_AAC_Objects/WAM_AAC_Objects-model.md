@@ -33,6 +33,11 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
+#### Literal Node: `http://vocab.getty.edu/ulan/500279110`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ObjectURI_
@@ -112,7 +117,7 @@ return getValue("ResourceURL")
 #### _CurrentOwnerURI_
 From column: _Root / ObjRecord / Inscription_
 ``` python
-return getValue("ObjectURI")+"/current_owner"
+return "http://thewalters.org/"
 ```
 
 #### _ObjectIdURI_
@@ -131,6 +136,12 @@ return getValue("ObjectID")
 From column: _Root / ObjRecord / ObjectNumber_
 ``` python
 return getValue("ObjectURI")+"/object_no"
+```
+
+#### _OwnerLabel_
+From column: _Root / ObjRecord / ObjUnderJurisOf_
+``` python
+return "The Walters Art Museum"
 ```
 
 
@@ -153,13 +164,13 @@ return getValue("ObjectURI")+"/object_no"
 | _MediumLodTerm_ | `skos:broadMatch` | `crm:E57_Material1`|
 | _MediumTermURI_ | `uri` | `crm:E57_Material1`|
 | _MediumURI_ | `uri` | `crm:E33_Linguistic_Object2`|
-| _ObjUnderJurisOf_ | `rdfs:label` | `crm:E40_Legal_Body1`|
 | _ObjectID_ | `rdf:value` | `crm:E42_Identifier1`|
 | _ObjectIdLabel_ | `rdfs:label` | `crm:E42_Identifier1`|
 | _ObjectIdURI_ | `uri` | `crm:E42_Identifier1`|
 | _ObjectNoURI_ | `uri` | `crm:E42_Identifier2`|
 | _ObjectNumber_ | `rdf:value` | `crm:E42_Identifier2`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
+| _OwnerLabel_ | `rdfs:label` | `crm:E40_Legal_Body1`|
 | _ProductionTimespanURI_ | `uri` | `crm:E52_Time-Span1`|
 | _ProductionURI_ | `uri` | `crm:E12_Production1`|
 | _PublicDescription_ | `rdf:value` | `crm:E33_Linguistic_Object3`|
@@ -173,6 +184,7 @@ return getValue("ObjectURI")+"/object_no"
 |  --- | -------- | ---|
 | `crm:E12_Production1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
 | `crm:E17_Type_Assignment1` | `crm:P42_assigned` | `crm:E55_Type1`|
+| `crm:E17_Type_Assignment1` | `crm:P21_had_general_purpose` | `http://vocab.getty.edu/aat/300179869`|
 | `crm:E22_Man-Made_Object1` | `crm:P108i_was_produced_by` | `crm:E12_Production1`|
 | `crm:E22_Man-Made_Object1` | `crm:P41i_was_classified_by` | `crm:E17_Type_Assignment1`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object1`|
@@ -185,8 +197,10 @@ return getValue("ObjectURI")+"/object_no"
 | `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document1`|
 | `crm:E22_Man-Made_Object1` | `crm:P129i_is_subject_of` | `crm:E33_Linguistic_Object2`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type1`|
+| `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300026687`|
 | `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300264237`|
-| `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300080091`|
 | `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
+| `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300080091`|
+| `crm:E40_Legal_Body1` | `skos:exactMatch` | `http://vocab.getty.edu/ulan/500279110`|
 | `crm:E42_Identifier1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E42_Identifier2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404621`|
