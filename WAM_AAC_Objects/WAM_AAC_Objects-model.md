@@ -117,7 +117,7 @@ return getValue("ResourceURL")
 #### _CurrentOwnerURI_
 From column: _Root / ObjRecord / Inscription_
 ``` python
-return "http://data.thewalters.org/"
+return "http://data.thewalters.org"
 ```
 
 #### _ObjectIdURI_
@@ -195,7 +195,6 @@ return "The Walters Art Museum"
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier2`|
 | `crm:E22_Man-Made_Object1` | `crm:P45_consists_of` | `crm:E57_Material1`|
 | `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document1`|
-| `crm:E22_Man-Made_Object1` | `crm:P129i_is_subject_of` | `crm:E33_Linguistic_Object2`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type1`|
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300026687`|
 | `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300264237`|
