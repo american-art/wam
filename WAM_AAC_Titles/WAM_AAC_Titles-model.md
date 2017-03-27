@@ -30,7 +30,7 @@ return getValue("Title")
 #### _TitleURI_
 From column: _Root / ObjRecord / Titles / Title / Title_
 ``` python
-return UM.uri_from_fields("thesauri/title/",getValue("Title"))
+return getValue("ObjectURI")+"/title/"+getValue("TitleID")
 ```
 
 #### _TitleIdentifier_
@@ -65,5 +65,5 @@ return getValue("TitleDisplayOrder")!='1'
 |  --- | -------- | ---|
 | `crm:E22_Man-Made_Object1` | `crm:P102_has_title` | `crm:E35_Title1`|
 | `crm:E35_Title1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
-| `crm:E35_Title1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
-| `crm:E42_Identifier1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404012`|
+| `crm:E35_Title1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
+| `crm:E42_Identifier1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404012`|
