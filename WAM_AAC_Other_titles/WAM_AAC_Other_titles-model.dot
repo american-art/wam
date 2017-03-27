@@ -10,14 +10,14 @@ n4[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
 n5[shape="plaintext",style="filled",fillcolor="gold",label="TitleType"];
 n6[shape="plaintext",style="filled",fillcolor="gold",label="TitleURI"];
 n7[shape="plaintext",style="filled",fillcolor="gold",label="AlternateTitleType"];
-n8[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
-n9[shape="plaintext",style="filled",fillcolor="gold",label="Title"];
+n8[shape="plaintext",style="filled",fillcolor="gold",label="Title"];
+n9[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
 }
 n2 -> n3[color="brown",fontcolor="black",label="P102_has_title"]
 n3 -> n4[color="brown",fontcolor="black",label="P2_has_type"]
 n4 -> n5[color="brown",fontcolor="black",label="prefLabel"]
 n3 -> n6[color="brown",fontcolor="black",label="classLink"]
 n4 -> n7[color="brown",fontcolor="black",label="classLink"]
-n2 -> n8[color="brown",fontcolor="black",label="classLink"]
-n3 -> n9[color="brown",fontcolor="black",label="value"]
+n3 -> n8[color="brown",fontcolor="black",label="value"]
+n2 -> n9[color="brown",fontcolor="black",label="classLink"]
 }
