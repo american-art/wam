@@ -14,7 +14,7 @@ return "object/"+getValue("ObjectID")
 #### _TitleURI_
 From column: _Root / ObjRecord / Titles / Title / Title_
 ``` python
-return UM.uri_from_fields("thesauri/title/",getValue("Title"))
+return getValue("ObjectURI")+"/title/"+getValue("TitleID")
 ```
 
 #### _TitleLabel_
