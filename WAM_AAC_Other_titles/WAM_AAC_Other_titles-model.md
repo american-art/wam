@@ -27,7 +27,7 @@ return getValue("Title")
 From column: _Root / ObjRecord / Titles / Title / TitleID_
 ``` python
 if getValue("TitleType"):
-    return getValue("TitleURI")+"/title_type"
+    return UM.uri_from_fields("thesauri/title_type/",getValue("TitleType"))
 else:
     return ""
 ```
