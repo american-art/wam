@@ -9,16 +9,15 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix karma: <http://isi.edu/integration/karma/ontologies/model/current#> .
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix km-dev: <http://isi.edu/integration/karma/dev#> .
 
-_:node1bal3819nx1 a km-dev:R2RMLMapping ;
+_:node1bdnk5oa6x1 a km-dev:R2RMLMapping ;
 	km-dev:sourceName "WAM_XMLExport_AAC_Media_v3.xml" ;
-	km-dev:modelPublicationTime "1488914220343"^^xsd:long ;
+	km-dev:modelPublicationTime "1492220305734"^^xsd:long ;
 	km-dev:modelVersion "1.7" ;
-	km-dev:hasInputColumns "[[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedMedia\"},{\"columnName\":\"Media\"},{\"columnName\":\"MediaDispRank\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedMedia\"},{\"columnName\":\"Media\"},{\"columnName\":\"FullImageURL\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectID\"}]]" ;
-	km-dev:hasOutputColumns "[[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedMedia\"},{\"columnName\":\"Media\"},{\"columnName\":\"ImageURL\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectURI\"}]]" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedMedia\"},{\"columnName\":\"Media\"},{\"columnName\":\"ImageCredit\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedMedia\"},{\"columnName\":\"Media\"},{\"columnName\":\"MediaDispRank\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedMedia\"},{\"columnName\":\"Media\"},{\"columnName\":\"FullImageURL\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectID\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedMedia\"},{\"columnName\":\"Media\"},{\"columnName\":\"ImageCredit\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedMedia\"},{\"columnName\":\"Media\"},{\"columnName\":\"ImageURL\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectRelatedMedia\"},{\"columnName\":\"Media\"},{\"columnName\":\"CreditURI\"}],[{\"columnName\":\"Root\"},{\"columnName\":\"ObjRecord\"},{\"columnName\":\"ObjectURI\"}]]" ;
 	km-dev:hasModelLabel "WAM_AAC_Media" ;
 	km-dev:hasBaseURI "http://localhost:8080/source/" ;
 	km-dev:hasWorksheetHistory """[
@@ -214,6 +213,64 @@ _:node1bal3819nx1 a km-dev:R2RMLMapping ;
         \"commandName\": \"SetWorksheetPropertiesCommand\"
     },
     {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectRelatedMedia\"},
+                    {\"columnName\": \"Media\"},
+                    {\"columnName\": \"ImageURL\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"CreditURI\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"if getValue(\\\"ImageURL\\\") and getValue(\\\"ImageCredit\\\"):\\n    return getValue(\\\"ImageURL\\\")+\\\"/credit_line\\\"\\nelse:\\n    return \\\"\\\"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedMedia\\\"},{\\\"columnName\\\":\\\"Media\\\"},{\\\"columnName\\\":\\\"ImageCredit\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedMedia\\\"},{\\\"columnName\\\":\\\"Media\\\"},{\\\"columnName\\\":\\\"ImageURL\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedMedia\\\"},{\\\"columnName\\\":\\\"Media\\\"},{\\\"columnName\\\":\\\"CreditURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
         \"tags\": [\"SemanticType\"],
         \"model\": \"new\",
         \"inputParameters\": [
@@ -370,6 +427,151 @@ _:node1bal3819nx1 a km-dev:R2RMLMapping ;
         \"commandName\": \"SetMetaPropertyCommand\"
     },
     {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectRelatedMedia\"},
+                    {\"columnName\": \"Media\"},
+                    {\"columnName\": \"CreditURI\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isProvenance\": false,
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"crm:E33_Linguistic_Object1\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1\",
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"language\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedMedia\\\"},{\\\"columnName\\\":\\\"Media\\\"},{\\\"columnName\\\":\\\"CreditURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedMedia\\\"},{\\\"columnName\\\":\\\"Media\\\"},{\\\"columnName\\\":\\\"CreditURI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"Root\"},
+                    {\"columnName\": \"ObjRecord\"},
+                    {\"columnName\": \"ObjectRelatedMedia\"},
+                    {\"columnName\": \"Media\"},
+                    {\"columnName\": \"ImageCredit\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"FullType\": \"http://www.w3.org/1999/02/22-rdf-syntax-ns#value\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"DomainLabel\": \"crm:E33_Linguistic_Object1\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1\",
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"language\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedMedia\\\"},{\\\"columnName\\\":\\\"Media\\\"},{\\\"columnName\\\":\\\"ImageCredit\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Root\\\"},{\\\"columnName\\\":\\\"ObjRecord\\\"},{\\\"columnName\\\":\\\"ObjectRelatedMedia\\\"},{\\\"columnName\\\":\\\"Media\\\"},{\\\"columnName\\\":\\\"ImageCredit\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
         \"tags\": [\"Modeling\"],
         \"model\": \"new\",
         \"inputParameters\": [
@@ -401,69 +603,159 @@ _:node1bal3819nx1 a km-dev:R2RMLMapping ;
             }
         ],
         \"commandName\": \"AddLinkCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"edge\",
+                \"value\": {
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by\",
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E38_Image1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E38_Image\"
+                },
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"AddLinkCommand\"
     }
 ]""" .
 
-km-dev:TriplesMap_c3a90b40-3bca-4dcc-8a37-249701c8b5c4 a rr:TriplesMap .
+km-dev:TriplesMap_89713824-5c74-48d1-82f4-600810472d7b a rr:TriplesMap .
 
-_:node1bal3819nx1 km-dev:hasTriplesMap km-dev:TriplesMap_c3a90b40-3bca-4dcc-8a37-249701c8b5c4 .
+_:node1bdnk5oa6x1 km-dev:hasTriplesMap km-dev:TriplesMap_89713824-5c74-48d1-82f4-600810472d7b .
 
-km-dev:TriplesMap_c3a90b40-3bca-4dcc-8a37-249701c8b5c4 km-dev:isPartOfMapping _:node1bal3819nx1 .
+km-dev:TriplesMap_89713824-5c74-48d1-82f4-600810472d7b km-dev:isPartOfMapping _:node1bdnk5oa6x1 .
 
-_:node1bal3819nx2 rr:tableName "WAM_XMLExport_AAC_Media_v3.xml" ;
+_:node1bdnk5oa6x2 rr:tableName "WAM_XMLExport_AAC_Media_v3.xml" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1bal3819nx1 .
+	km-dev:isPartOfMapping _:node1bdnk5oa6x1 .
 
-_:node1bal3819nx1 km-dev:hasLogicalTable _:node1bal3819nx2 .
+_:node1bdnk5oa6x1 km-dev:hasLogicalTable _:node1bdnk5oa6x2 .
 
-km-dev:TriplesMap_c3a90b40-3bca-4dcc-8a37-249701c8b5c4 rr:logicalTable _:node1bal3819nx2 ;
-	rr:subjectMap _:node1bal3819nx3 .
+km-dev:TriplesMap_89713824-5c74-48d1-82f4-600810472d7b rr:logicalTable _:node1bdnk5oa6x2 ;
+	rr:subjectMap _:node1bdnk5oa6x3 .
 
-_:node1bal3819nx1 km-dev:hasSubjectMap _:node1bal3819nx3 .
+_:node1bdnk5oa6x1 km-dev:hasSubjectMap _:node1bdnk5oa6x3 .
 
-_:node1bal3819nx3 km-dev:isPartOfMapping _:node1bal3819nx1 ;
+_:node1bdnk5oa6x3 km-dev:isPartOfMapping _:node1bdnk5oa6x1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1" ;
 	rr:class crm:E22_Man-Made_Object ;
 	rr:template "object/{[\"Root\",\"ObjRecord\",\"ObjectID\"]}" ;
 	a km-dev:steinerTreeRootNode .
 
-km-dev:PredicateObjectMap_485d9f57-e724-4039-ac5b-e503588c11e8 rr:predicate crm:P138i_has_representation .
+km-dev:PredicateObjectMap_7865ff66-bd6c-464f-8cff-4353c8c11d5f rr:predicate crm:P138i_has_representation .
 
-km-dev:RefObjectMap_db4d61cc-a340-467e-8ad0-79daca0f8034 a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_b6a1d0b6-3993-4107-93b0-639842fdc516 ;
-	km-dev:isPartOfMapping _:node1bal3819nx1 .
+km-dev:RefObjectMap_a7e98d0a-6b83-4611-82c7-9805a6f5f661 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_7db21b9a-4919-436d-9747-0a514b3058b9 ;
+	km-dev:isPartOfMapping _:node1bdnk5oa6x1 .
 
-_:node1bal3819nx1 km-dev:hasObjectMap km-dev:RefObjectMap_db4d61cc-a340-467e-8ad0-79daca0f8034 .
+_:node1bdnk5oa6x1 km-dev:hasObjectMap km-dev:RefObjectMap_a7e98d0a-6b83-4611-82c7-9805a6f5f661 .
 
-km-dev:PredicateObjectMap_485d9f57-e724-4039-ac5b-e503588c11e8 rr:objectMap km-dev:RefObjectMap_db4d61cc-a340-467e-8ad0-79daca0f8034 .
+km-dev:PredicateObjectMap_7865ff66-bd6c-464f-8cff-4353c8c11d5f rr:objectMap km-dev:RefObjectMap_a7e98d0a-6b83-4611-82c7-9805a6f5f661 .
 
-km-dev:TriplesMap_c3a90b40-3bca-4dcc-8a37-249701c8b5c4 rr:predicateObjectMap km-dev:PredicateObjectMap_485d9f57-e724-4039-ac5b-e503588c11e8 .
+km-dev:TriplesMap_89713824-5c74-48d1-82f4-600810472d7b rr:predicateObjectMap km-dev:PredicateObjectMap_7865ff66-bd6c-464f-8cff-4353c8c11d5f .
 
-km-dev:PredicateObjectMap_485d9f57-e724-4039-ac5b-e503588c11e8 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1bal3819nx1 .
+km-dev:PredicateObjectMap_7865ff66-bd6c-464f-8cff-4353c8c11d5f a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bdnk5oa6x1 .
 
-_:node1bal3819nx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_485d9f57-e724-4039-ac5b-e503588c11e8 .
+_:node1bdnk5oa6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_7865ff66-bd6c-464f-8cff-4353c8c11d5f .
 
-km-dev:TriplesMap_b6a1d0b6-3993-4107-93b0-639842fdc516 a rr:TriplesMap .
+km-dev:TriplesMap_7db21b9a-4919-436d-9747-0a514b3058b9 a rr:TriplesMap .
 
-_:node1bal3819nx1 km-dev:hasTriplesMap km-dev:TriplesMap_b6a1d0b6-3993-4107-93b0-639842fdc516 .
+_:node1bdnk5oa6x1 km-dev:hasTriplesMap km-dev:TriplesMap_7db21b9a-4919-436d-9747-0a514b3058b9 .
 
-km-dev:TriplesMap_b6a1d0b6-3993-4107-93b0-639842fdc516 km-dev:isPartOfMapping _:node1bal3819nx1 .
+km-dev:TriplesMap_7db21b9a-4919-436d-9747-0a514b3058b9 km-dev:isPartOfMapping _:node1bdnk5oa6x1 .
 
-_:node1bal3819nx4 rr:tableName "WAM_XMLExport_AAC_Media_v3.xml" ;
+_:node1bdnk5oa6x4 rr:tableName "WAM_XMLExport_AAC_Media_v3.xml" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1bal3819nx1 .
+	km-dev:isPartOfMapping _:node1bdnk5oa6x1 .
 
-_:node1bal3819nx1 km-dev:hasLogicalTable _:node1bal3819nx4 .
+_:node1bdnk5oa6x1 km-dev:hasLogicalTable _:node1bdnk5oa6x4 .
 
-km-dev:TriplesMap_b6a1d0b6-3993-4107-93b0-639842fdc516 rr:logicalTable _:node1bal3819nx4 ;
-	rr:subjectMap _:node1bal3819nx5 .
+km-dev:TriplesMap_7db21b9a-4919-436d-9747-0a514b3058b9 rr:logicalTable _:node1bdnk5oa6x4 ;
+	rr:subjectMap _:node1bdnk5oa6x5 .
 
-_:node1bal3819nx1 km-dev:hasSubjectMap _:node1bal3819nx5 .
+_:node1bdnk5oa6x1 km-dev:hasSubjectMap _:node1bdnk5oa6x5 .
 
-_:node1bal3819nx5 km-dev:isPartOfMapping _:node1bal3819nx1 ;
+_:node1bdnk5oa6x5 km-dev:isPartOfMapping _:node1bdnk5oa6x1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E38_Image1" ;
 	rr:class crm:E38_Image ;
 	rr:template "{[\"Root\",\"ObjRecord\",\"ObjectRelatedMedia\",\"Media\",\"ImageURL\"]}" .
+
+km-dev:PredicateObjectMap_bd437d14-58f7-4d8e-ad81-b83885b651b5 rr:predicate crm:P67i_is_referred_to_by .
+
+km-dev:RefObjectMap_309bae86-4d6b-42fb-a4cf-fed078d00e34 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_762a4e91-ba1b-482b-9cad-ef05ec53796f ;
+	km-dev:isPartOfMapping _:node1bdnk5oa6x1 .
+
+_:node1bdnk5oa6x1 km-dev:hasObjectMap km-dev:RefObjectMap_309bae86-4d6b-42fb-a4cf-fed078d00e34 .
+
+km-dev:PredicateObjectMap_bd437d14-58f7-4d8e-ad81-b83885b651b5 rr:objectMap km-dev:RefObjectMap_309bae86-4d6b-42fb-a4cf-fed078d00e34 .
+
+km-dev:TriplesMap_7db21b9a-4919-436d-9747-0a514b3058b9 rr:predicateObjectMap km-dev:PredicateObjectMap_bd437d14-58f7-4d8e-ad81-b83885b651b5 .
+
+km-dev:PredicateObjectMap_bd437d14-58f7-4d8e-ad81-b83885b651b5 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bdnk5oa6x1 .
+
+_:node1bdnk5oa6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_bd437d14-58f7-4d8e-ad81-b83885b651b5 .
+
+km-dev:TriplesMap_762a4e91-ba1b-482b-9cad-ef05ec53796f a rr:TriplesMap .
+
+_:node1bdnk5oa6x1 km-dev:hasTriplesMap km-dev:TriplesMap_762a4e91-ba1b-482b-9cad-ef05ec53796f .
+
+km-dev:TriplesMap_762a4e91-ba1b-482b-9cad-ef05ec53796f km-dev:isPartOfMapping _:node1bdnk5oa6x1 .
+
+_:node1bdnk5oa6x6 rr:tableName "WAM_XMLExport_AAC_Media_v3.xml" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1bdnk5oa6x1 .
+
+_:node1bdnk5oa6x1 km-dev:hasLogicalTable _:node1bdnk5oa6x6 .
+
+km-dev:TriplesMap_762a4e91-ba1b-482b-9cad-ef05ec53796f rr:logicalTable _:node1bdnk5oa6x6 ;
+	rr:subjectMap _:node1bdnk5oa6x7 .
+
+_:node1bdnk5oa6x1 km-dev:hasSubjectMap _:node1bdnk5oa6x7 .
+
+_:node1bdnk5oa6x7 km-dev:isPartOfMapping _:node1bdnk5oa6x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1" ;
+	rr:class crm:E33_Linguistic_Object ;
+	rr:template "{[\"Root\",\"ObjRecord\",\"ObjectRelatedMedia\",\"Media\",\"CreditURI\"]}" .
+
+km-dev:PredicateObjectMap_65550adb-d546-4729-b53a-a4fae08ccaa6 rr:predicate rdf:value .
+
+_:node1bdnk5oa6x8 rr:column "[\"Root\",\"ObjRecord\",\"ObjectRelatedMedia\",\"Media\",\"ImageCredit\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1bdnk5oa6x1 .
+
+_:node1bdnk5oa6x1 km-dev:hasObjectMap _:node1bdnk5oa6x8 .
+
+km-dev:PredicateObjectMap_65550adb-d546-4729-b53a-a4fae08ccaa6 rr:objectMap _:node1bdnk5oa6x8 .
+
+km-dev:TriplesMap_762a4e91-ba1b-482b-9cad-ef05ec53796f rr:predicateObjectMap km-dev:PredicateObjectMap_65550adb-d546-4729-b53a-a4fae08ccaa6 .
+
+km-dev:PredicateObjectMap_65550adb-d546-4729-b53a-a4fae08ccaa6 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bdnk5oa6x1 .
+
+_:node1bdnk5oa6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_65550adb-d546-4729-b53a-a4fae08ccaa6 .
