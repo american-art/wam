@@ -189,6 +189,15 @@ else:
     return ""
 ```
 
+#### _ObjectTypeURI_
+From column: _Root / ObjRecord / PhysicalDescription / PhysicalDescriptionTerms / TypeURI_
+``` python
+if "Object Name" in getValue("ThesXrefType") and getValue("SourceTermID"):
+    return getValue("ObjectURI")+"/classification"
+else:
+    return ""
+```
+
 
 ## Selections
 
@@ -214,6 +223,7 @@ else:
 | _ObjectIdURI_ | `uri` | `crm:E42_Identifier1`|
 | _ObjectNoURI_ | `uri` | `crm:E42_Identifier2`|
 | _ObjectNumber_ | `rdf:value` | `crm:E42_Identifier2`|
+| _ObjectTypeURI_ | `uri` | `crm:E17_Type_Assignment2`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _OwnerLabel_ | `rdfs:label` | `crm:E40_Legal_Body1`|
 | _ProductionTimespanURI_ | `uri` | `crm:E52_Time-Span1`|
@@ -230,11 +240,12 @@ else:
 | From | Property | To |
 |  --- | -------- | ---|
 | `crm:E12_Production1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
-| `crm:E17_Type_Assignment1` | `crm:P42_assigned` | `crm:E55_Type2`|
 | `crm:E17_Type_Assignment1` | `crm:P42_assigned` | `crm:E55_Type1`|
 | `crm:E17_Type_Assignment1` | `crm:P21_had_general_purpose` | `http://vocab.getty.edu/aat/300179869`|
+| `crm:E17_Type_Assignment2` | `crm:P42_assigned` | `crm:E55_Type2`|
 | `crm:E22_Man-Made_Object1` | `crm:P108i_was_produced_by` | `crm:E12_Production1`|
 | `crm:E22_Man-Made_Object1` | `crm:P41i_was_classified_by` | `crm:E17_Type_Assignment1`|
+| `crm:E22_Man-Made_Object1` | `crm:P41i_was_classified_by` | `crm:E17_Type_Assignment2`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object1`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object2`|
 | `crm:E22_Man-Made_Object1` | `crm:P129i_is_subject_of` | `crm:E33_Linguistic_Object3`|
