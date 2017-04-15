@@ -72,13 +72,19 @@ return getValue("ObjectURI")+"/credit_line"
 #### _ProductionURI_
 From column: _Root / ObjRecord / DataDateStamp_
 ``` python
-return getValue("ObjectURI")+"/production"
+if getValue("DateBegin") or getValue("DateEnd"):
+    return getValue("ObjectURI")+"/production"
+else:
+    return ""
 ```
 
 #### _ProductionTimespanURI_
 From column: _Root / ObjRecord / ProductionURI_
 ``` python
-return getValue("ProductionURI")+"/timespan"
+if getValue("DateBegin") or getValue("DateEnd"):
+    return getValue("ProductionURI")+"/timespan"
+else:
+    return ""
 ```
 
 #### _MediumURI_
@@ -165,6 +171,24 @@ else:
     return ""
 ```
 
+#### _DateBeginFormatted_
+From column: _Root / ObjRecord / DateBegin_
+``` python
+if getValue("DateBegin"):
+    return getValue("DateBegin")+"-01-01"
+else:
+    return ""
+```
+
+#### _DateEndFormatted_
+From column: _Root / ObjRecord / DateEnd_
+``` python
+if getValue("DateEnd"):
+    return getValue("DateEnd")+"-12-31"
+else:
+    return ""
+```
+
 
 ## Selections
 
@@ -177,8 +201,8 @@ else:
 | _CreditLine_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _CreditLineURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _CurrentOwnerURI_ | `uri` | `crm:E40_Legal_Body1`|
-| _DateBegin_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
-| _DateEnd_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
+| _DateBeginFormatted_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
+| _DateEndFormatted_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | _Dated_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _DescriptionURI_ | `uri` | `crm:E33_Linguistic_Object3`|
 | _Medium_ | `rdf:value` | `crm:E33_Linguistic_Object2`|
