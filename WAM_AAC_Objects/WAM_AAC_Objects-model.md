@@ -1,4 +1,4 @@
-# WAM_XMLExport_AAC_Objects.xml
+# WAM_XMLExport_AAC_Objects_v2_3-31-2017.xml
 
 ## Add Column
 
@@ -90,7 +90,7 @@ return getValue("ObjectURI")+"/medium_text"
 #### _MediumTermURI_
 From column: _Root / ObjRecord / PhysicalDescription / PhysicalDescriptionTerms / SourceTermID_
 ``` python
-if getValue("SourceTermID"):
+if "Object Name" not in getValue("ThesXrefType") and getValue("SourceTermID"):
     return UM.uri_from_fields("material/",getValue("Term"))
 else:
     return ""
@@ -99,7 +99,10 @@ else:
 #### _MediumLodTerm_
 From column: _Root / ObjRecord / PhysicalDescription / PhysicalDescriptionTerms / Term_
 ``` python
-return "http://vocab.getty.edu/aat/"+getValue("SourceTermID")
+if "Object Name" not in getValue("ThesXrefType") and getValue("SourceTermID"):
+    return "http://vocab.getty.edu/aat/"+getValue("SourceTermID")
+else:
+    return ""
 ```
 
 #### _DescriptionURI_
@@ -144,6 +147,24 @@ From column: _Root / ObjRecord / ObjUnderJurisOf_
 return "The Walters Art Museum"
 ```
 
+#### _TypeURI_
+From column: _Root / ObjRecord / PhysicalDescription / PhysicalDescriptionTerms / ThesXrefType_
+``` python
+if "Object Name" in getValue("ThesXrefType") and getValue("SourceTermID"):
+    return "http://vocab.getty.edu/aat/"+getValue("SourceTermID")
+else:
+    return ""
+```
+
+#### _TypeLabel_
+From column: _Root / ObjRecord / PhysicalDescription / PhysicalDescriptionTerms / ThesXrefType_
+``` python
+if "Object Name" in getValue("ThesXrefType") and getValue("SourceTermID"):
+    return getValue("Term")
+else:
+    return ""
+```
+
 
 ## Selections
 
@@ -161,7 +182,7 @@ return "The Walters Art Museum"
 | _Dated_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _DescriptionURI_ | `uri` | `crm:E33_Linguistic_Object3`|
 | _Medium_ | `rdf:value` | `crm:E33_Linguistic_Object2`|
-| _MediumLodTerm_ | `skos:broadMatch` | `crm:E57_Material1`|
+| _MediumLodTerm_ | `uri` | `owl:Thing1`|
 | _MediumTermURI_ | `uri` | `crm:E57_Material1`|
 | _MediumURI_ | `uri` | `crm:E33_Linguistic_Object2`|
 | _ObjectID_ | `rdf:value` | `crm:E42_Identifier1`|
@@ -176,6 +197,8 @@ return "The Walters Art Museum"
 | _PublicDescription_ | `rdf:value` | `crm:E33_Linguistic_Object3`|
 | _ResourceURL_ | `rdfs:label` | `foaf:Document1`|
 | _Term_ | `skos:prefLabel` | `crm:E57_Material1`|
+| _TypeLabel_ | `rdfs:label` | `crm:E55_Type2`|
+| _TypeURI_ | `uri` | `crm:E55_Type2`|
 | _UrlURI_ | `uri` | `foaf:Document1`|
 
 
@@ -183,6 +206,7 @@ return "The Walters Art Museum"
 | From | Property | To |
 |  --- | -------- | ---|
 | `crm:E12_Production1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
+| `crm:E17_Type_Assignment1` | `crm:P42_assigned` | `crm:E55_Type2`|
 | `crm:E17_Type_Assignment1` | `crm:P42_assigned` | `crm:E55_Type1`|
 | `crm:E17_Type_Assignment1` | `crm:P21_had_general_purpose` | `http://vocab.getty.edu/aat/300179869`|
 | `crm:E22_Man-Made_Object1` | `crm:P108i_was_produced_by` | `crm:E12_Production1`|
@@ -193,13 +217,15 @@ return "The Walters Art Museum"
 | `crm:E22_Man-Made_Object1` | `crm:P52_has_current_owner` | `crm:E40_Legal_Body1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier2`|
+| `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type1`|
 | `crm:E22_Man-Made_Object1` | `crm:P45_consists_of` | `crm:E57_Material1`|
 | `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document1`|
-| `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type1`|
+| `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type2`|
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300026687`|
 | `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300264237`|
-| `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300080091`|
 | `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
+| `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300080091`|
 | `crm:E40_Legal_Body1` | `skos:exactMatch` | `http://vocab.getty.edu/ulan/500279110`|
 | `crm:E42_Identifier1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E42_Identifier2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404621`|
+| `crm:E57_Material1` | `skos:broadMatch` | `owl:Thing1`|
