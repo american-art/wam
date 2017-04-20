@@ -5,17 +5,27 @@ label="WAM_XMLExport_AAC_Constituents_V3.xml"
 subgraph cluster {
 label="model"
 n2[style="filled",color="white",fillcolor="lightgray",label="E39_Actor1"];
-n3[style="filled",color="white",fillcolor="lightgray",label="E82_Actor_Appellation1"];
-n4[shape="plaintext",style="filled",fillcolor="gold",label="NameURI"];
-n5[shape="plaintext",style="filled",fillcolor="gold",label="ConstituentURI"];
-n6[shape="plaintext",style="filled",fillcolor="gold",label="NameLabel"];
-n7[shape="plaintext",style="filled",fillcolor="gold",label="DisplayName"];
-n8[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
+n3[style="filled",color="white",fillcolor="lightgray",label="E42_Identifier1"];
+n4[style="filled",color="white",fillcolor="lightgray",label="E82_Actor_Appellation1"];
+n5[shape="plaintext",style="filled",fillcolor="gold",label="PrefIdURI"];
+n6[shape="plaintext",style="filled",fillcolor="gold",label="Id_Label"];
+n7[shape="plaintext",style="filled",fillcolor="gold",label="ConstituentID"];
+n8[shape="plaintext",style="filled",fillcolor="gold",label="NameURI"];
+n9[shape="plaintext",style="filled",fillcolor="gold",label="NameLabel"];
+n10[shape="plaintext",style="filled",fillcolor="gold",label="ConstituentURI"];
+n11[shape="plaintext",style="filled",fillcolor="gold",label="DisplayName"];
+n12[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404672"];
+n13[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
 }
-n2 -> n3[color="brown",fontcolor="black",label="P131_is_identified_by"]
-n3 -> n4[color="brown",fontcolor="black",label="classLink"]
-n2 -> n5[color="brown",fontcolor="black",label="classLink"]
-n2 -> n6[color="brown",fontcolor="black",label="label"]
+n2 -> n3[color="brown",fontcolor="black",label="P1_is_identified_by"]
+n2 -> n4[color="brown",fontcolor="black",label="P131_is_identified_by"]
+n3 -> n5[color="brown",fontcolor="black",label="classLink"]
+n3 -> n6[color="brown",fontcolor="black",label="label"]
 n3 -> n7[color="brown",fontcolor="black",label="value"]
-n3 -> n8[color="brown",fontcolor="black",label="P2_has_type"]
+n4 -> n8[color="brown",fontcolor="black",label="classLink"]
+n2 -> n9[color="brown",fontcolor="black",label="label"]
+n2 -> n10[color="brown",fontcolor="black",label="classLink"]
+n4 -> n11[color="brown",fontcolor="black",label="value"]
+n3 -> n12[color="brown",fontcolor="black",label="P2_has_type"]
+n4 -> n13[color="brown",fontcolor="black",label="P2_has_type"]
 }
