@@ -28,7 +28,10 @@ Literal Type: ``
 #### _ConstituentURI_
 From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentID_
 ``` python
-return "constituent/"+getValue("ConstituentID")
+if getValue("Role") != "Patron":
+    return "constituent/"+getValue("ConstituentID")
+else:
+    return ''
 ```
 
 #### _NameLabel_
