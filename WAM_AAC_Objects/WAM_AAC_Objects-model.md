@@ -1,4 +1,4 @@
-# WAM_XMLExport_AAC_Objects_v2_3-31-2017.xml
+# WAM_XMLExport_AAC_Objects_v3_9-26-17.xml
 
 ## Add Column
 
@@ -96,7 +96,7 @@ return getValue("ObjectURI")+"/medium_text"
 #### _MediumTermURI_
 From column: _Root / ObjRecord / PhysicalDescription / PhysicalDescriptionTerms / SourceTermID_
 ``` python
-if "Object Name" not in getValue("ThesXrefType") and getValue("SourceTermID"):
+if (getValue("ThesXrefType") == "AAT Support/Ground/Base" or getValue("ThesXrefType") == "AAT Materials") and getValue("SourceTermID"):
     return UM.uri_from_fields("material/",getValue("Term"))
 else:
     return ""
@@ -192,8 +192,26 @@ else:
 #### _ObjectTypeURI_
 From column: _Root / ObjRecord / PhysicalDescription / PhysicalDescriptionTerms / TypeURI_
 ``` python
-if "Object Name" in getValue("ThesXrefType") and getValue("SourceTermID"):
+if (getValue("ThesXrefType") == "AAT Object Name" or getValue("ThexXrefType") == "AAT Color") and getValue("SourceTermID"):
     return getValue("ObjectURI")+"/classification"
+else:
+    return ""
+```
+
+#### _TechniqueURI_
+From column: _Root / ObjRecord / PhysicalDescription / PhysicalDescriptionTerms / ThesXrefType_
+``` python
+if getValue("ThesXrefType") == "AAT Technique" and getValue("SourceTermID"):
+    return "http://vocab.getty.edu/aat/" + getValue("SourceTermID")
+else:
+    return ""
+```
+
+#### _TechniqueLabel_
+From column: _Root / ObjRecord / PhysicalDescription / PhysicalDescriptionTerms / SourceTermID_
+``` python
+if getValue("ThesXrefType") == "AAT Technique" and getValue("SourceTermID"):
+    return getValue("Term")
 else:
     return ""
 ```
@@ -230,6 +248,8 @@ else:
 | _ProductionURI_ | `uri` | `crm:E12_Production1`|
 | _PublicDescription_ | `rdf:value` | `crm:E33_Linguistic_Object3`|
 | _ResourceURL_ | `rdfs:label` | `foaf:Document1`|
+| _TechniqueLabel_ | `rdfs:label` | `crm:E55_Type3`|
+| _TechniqueURI_ | `uri` | `crm:E55_Type3`|
 | _Term_ | `skos:prefLabel` | `crm:E57_Material1`|
 | _TypeLabel_ | `rdfs:label` | `crm:E55_Type2`|
 | _TypeURI_ | `uri` | `crm:E55_Type2`|
@@ -240,6 +260,7 @@ else:
 | From | Property | To |
 |  --- | -------- | ---|
 | `crm:E12_Production1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
+| `crm:E12_Production1` | `crm:P32_used_general_technique` | `crm:E55_Type3`|
 | `crm:E17_Type_Assignment1` | `crm:P42_assigned` | `crm:E55_Type1`|
 | `crm:E17_Type_Assignment1` | `crm:P21_had_general_purpose` | `http://vocab.getty.edu/aat/300179869`|
 | `crm:E17_Type_Assignment2` | `crm:P42_assigned` | `crm:E55_Type2`|
