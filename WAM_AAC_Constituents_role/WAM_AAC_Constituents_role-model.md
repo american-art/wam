@@ -8,7 +8,7 @@
 #### _ConstituentURI_
 From column: _Root / ObjRecord / Constituents / ObjectRelatedConstituent / ConstituentID_
 ``` python
-if getValue("Role") in ['Painter','Artist','Sculptor','Designer','Goldsmith','Author']:
+if getValue("Role") != "Patron":
     return "constituent/"+getValue("ConstituentID")
 else:
     return ""
