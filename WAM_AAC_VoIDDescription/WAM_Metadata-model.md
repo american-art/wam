@@ -30,7 +30,6 @@ return getValue("Homepage")
 | _Entities_ | `http://rdfs.org/ns/void#entities` | `Dataset1`|
 | _Example_resource_ | `http://rdfs.org/ns/void#exampleResource` | `Dataset1`|
 | _Homepage_ | `uri` | `foaf:Document1`|
-| _HomepageURL_ | `rdfs:label` | `foaf:Document1`|
 | _Issued_ | `dct:issued` | `Dataset1`|
 | _License_ | `dct:license` | `Dataset1`|
 | _Modified_ | `dct:modified` | `Dataset1`|
