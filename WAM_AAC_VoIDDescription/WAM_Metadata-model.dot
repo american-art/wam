@@ -6,50 +6,56 @@ subgraph cluster {
 label="model"
 n2[style="filled",color="white",fillcolor="lightgray",label="Dataset1"];
 n3[style="filled",color="white",fillcolor="lightgray",label="Document1"];
-n4[shape="plaintext",style="filled",fillcolor="gold",label="URI_pattern"];
-n5[shape="plaintext",style="filled",fillcolor="gold",label="Creator"];
-n6[shape="plaintext",style="filled",fillcolor="gold",label="RDF_data_dump"];
-n7[shape="plaintext",style="filled",fillcolor="gold",label="License"];
-n8[shape="plaintext",style="filled",fillcolor="gold",label="Issued"];
-n9[shape="plaintext",style="filled",fillcolor="gold",label="Example_resource"];
-n10[shape="plaintext",style="filled",fillcolor="gold",label="Classes"];
-n11[shape="plaintext",style="filled",fillcolor="gold",label="Entities"];
-n12[shape="plaintext",style="filled",fillcolor="gold",label="Sparql_endpoint"];
-n13[shape="plaintext",style="filled",fillcolor="gold",label="Dataset_URI"];
-n14[shape="plaintext",style="filled",fillcolor="gold",label="Homepage"];
-n15[shape="plaintext",style="filled",fillcolor="gold",label="values"];
-n16[shape="plaintext",style="filled",fillcolor="gold",label="Contributor"];
-n17[shape="plaintext",style="filled",fillcolor="gold",label="Properties"];
-n18[shape="plaintext",style="filled",fillcolor="gold",label="Triples"];
-n19[shape="plaintext",style="filled",fillcolor="gold",label="Publisher"];
-n20[shape="plaintext",style="filled",fillcolor="gold",label="Description"];
+n4[shape="plaintext",style="filled",fillcolor="gold",label="Homepage"];
+n5[shape="plaintext",style="filled",fillcolor="gold",label="Entities"];
+n6[shape="plaintext",style="filled",fillcolor="gold",label="Created"];
+n7[shape="plaintext",style="filled",fillcolor="gold",label="Sparql_endpoint"];
+n8[shape="plaintext",style="filled",fillcolor="gold",label="Classes"];
+n9[shape="plaintext",style="filled",fillcolor="gold",label="Description"];
+n10[shape="plaintext",style="filled",fillcolor="gold",label="Triples"];
+n11[shape="plaintext",style="filled",fillcolor="gold",label="Technical_feature"];
+n12[shape="plaintext",style="filled",fillcolor="gold",label="License"];
+n13[shape="plaintext",style="filled",fillcolor="gold",label="Issued"];
+n14[shape="plaintext",style="filled",fillcolor="gold",label="Modified"];
+n15[shape="plaintext",style="filled",fillcolor="gold",label="Publisher"];
+n16[shape="plaintext",style="filled",fillcolor="gold",label="values"];
+n17[shape="plaintext",style="filled",fillcolor="gold",label="Date"];
+n18[shape="plaintext",style="filled",fillcolor="gold",label="Example_resource"];
+n19[shape="plaintext",style="filled",fillcolor="gold",label="Properties"];
+n20[shape="plaintext",style="filled",fillcolor="gold",label="URI_pattern"];
 n21[shape="plaintext",style="filled",fillcolor="gold",label="values"];
-n22[shape="plaintext",style="filled",fillcolor="gold",label="Title"];
-n23[shape="plaintext",style="filled",fillcolor="gold",label="Technical_feature"];
-n24[shape="plaintext",style="filled",fillcolor="gold",label="HomepageURL"];
-n25[shape="plaintext",style="filled",fillcolor="gold",label="Subject"];
+n22[shape="plaintext",style="filled",fillcolor="gold",label="Dataset_URI"];
+n23[shape="plaintext",style="filled",fillcolor="gold",label="Subject"];
+n24[shape="plaintext",style="filled",fillcolor="gold",label="RDF_data_dump"];
+n25[shape="plaintext",style="filled",fillcolor="gold",label="Creator"];
+n26[shape="plaintext",style="filled",fillcolor="gold",label="Title"];
+n27[shape="plaintext",style="filled",fillcolor="gold",label="HomepageURL"];
+n28[shape="plaintext",style="filled",fillcolor="gold",label="Contributor"];
 }
 n2 -> n3[color="brown",fontcolor="black",label="homepage"]
-n2 -> n4[color="brown",fontcolor="black",label="uriSpace"]
-n2 -> n5[color="brown",fontcolor="black",label="creator"]
-n2 -> n6[color="brown",fontcolor="black",label="dataDump"]
-n2 -> n7[color="brown",fontcolor="black",label="license"]
-n2 -> n8[color="brown",fontcolor="black",label="issued"]
-n2 -> n9[color="brown",fontcolor="black",label="exampleResource"]
-n2 -> n10[color="brown",fontcolor="black",label="classes"]
-n2 -> n11[color="brown",fontcolor="black",label="entities"]
-n2 -> n12[color="brown",fontcolor="black",label="sparqlEndpoint"]
-n2 -> n13[color="brown",fontcolor="black",label="classLink"]
-n3 -> n14[color="brown",fontcolor="black",label="classLink"]
-n2 -> n15[color="brown",fontcolor="black",label="source"]
-n2 -> n16[color="brown",fontcolor="black",label="contributor"]
-n2 -> n17[color="brown",fontcolor="black",label="properties"]
-n2 -> n18[color="brown",fontcolor="black",label="triples"]
-n2 -> n19[color="brown",fontcolor="black",label="publisher"]
-n2 -> n20[color="brown",fontcolor="black",label="description"]
+n3 -> n4[color="brown",fontcolor="black",label="classLink"]
+n2 -> n5[color="brown",fontcolor="black",label="entities"]
+n2 -> n6[color="brown",fontcolor="black",label="created"]
+n2 -> n7[color="brown",fontcolor="black",label="sparqlEndpoint"]
+n2 -> n8[color="brown",fontcolor="black",label="classes"]
+n2 -> n9[color="brown",fontcolor="black",label="description"]
+n2 -> n10[color="brown",fontcolor="black",label="triples"]
+n2 -> n11[color="brown",fontcolor="black",label="feature"]
+n2 -> n12[color="brown",fontcolor="black",label="license"]
+n2 -> n13[color="brown",fontcolor="black",label="issued"]
+n2 -> n14[color="brown",fontcolor="black",label="modified"]
+n2 -> n15[color="brown",fontcolor="black",label="publisher"]
+n2 -> n16[color="brown",fontcolor="black",label="source"]
+n2 -> n17[color="brown",fontcolor="black",label="date"]
+n2 -> n18[color="brown",fontcolor="black",label="exampleResource"]
+n2 -> n19[color="brown",fontcolor="black",label="properties"]
+n2 -> n20[color="brown",fontcolor="black",label="uriSpace"]
 n2 -> n21[color="brown",fontcolor="black",label="vocabulary"]
-n2 -> n22[color="brown",fontcolor="black",label="title"]
-n2 -> n23[color="brown",fontcolor="black",label="feature"]
-n3 -> n24[color="brown",fontcolor="black",label="label"]
-n2 -> n25[color="brown",fontcolor="black",label="subject"]
+n2 -> n22[color="brown",fontcolor="black",label="classLink"]
+n2 -> n23[color="brown",fontcolor="black",label="subject"]
+n2 -> n24[color="brown",fontcolor="black",label="dataDump"]
+n2 -> n25[color="brown",fontcolor="black",label="creator"]
+n2 -> n26[color="brown",fontcolor="black",label="title"]
+n3 -> n27[color="brown",fontcolor="black",label="label"]
+n2 -> n28[color="brown",fontcolor="black",label="contributor"]
 }
