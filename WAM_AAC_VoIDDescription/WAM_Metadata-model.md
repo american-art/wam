@@ -1,4 +1,4 @@
-# wam_metadata.json
+# Data_WAM_metadata.json
 
 ## Add Column
 
@@ -21,6 +21,9 @@ return getValue("Homepage")
 | _Contributor_ | `dct:contributor` | `Dataset1`|
 | _Created_ | `dct:created` | `Dataset1`|
 | _Creator_ | `dct:creator` | `Dataset1`|
+| _DatasetDescription_ | `uri` | `DatasetDescription1`|
+| _DatasetDescriptionCreator_ | `dct:creator` | `DatasetDescription1`|
+| _DatasetDescriptionTitle_ | `dct:title` | `DatasetDescription1`|
 | _Dataset_URI_ | `uri` | `Dataset1`|
 | _Date_ | `dct:date` | `Dataset1`|
 | _Description_ | `dct:description` | `Dataset1`|
@@ -48,3 +51,4 @@ return getValue("Homepage")
 | From | Property | To |
 |  --- | -------- | ---|
 | `Dataset1` | `foaf:homepage` | `foaf:Document1`|
+| `DatasetDescription1` | `foaf:primaryTopic` | `Dataset1`|
